@@ -1,0 +1,242 @@
+<html>
+TheFourierTransformAndItsApplications-Lecture15
+<p>
+</p><p><b>Instructor (Brad Osgood)</b>:They took me by surprise again.  What do you know, I think we’re on the air.  Where is everybody today?  I mean, it’s Friday, I understand that, but like no one’s out there.  Not that – excuse me, I didn’t mean to say no one’s out there, but it looks a little thin, the population.
+
+</p><p>Okay, while people are drifting in, let me call your attention to the important information up on the board.  This is information for the exam for next week.  
+
+</p><p>So the midterm exam is October 31st, Halloween, sorry, and there are three sessions, from 2:00 p.m. to 3:30 p.m., from 4:00 p.m. to 5:30 p.m., and from 6:00 p.m. to 7:30 p.m., and they are – we have the locations for those now, so from 2:00 p.m. to 3:30 p.m., that is in building 380, room 380 W.  Building 380 is the Math Corner.  That’s the front right hand corner of the quad if you are looking at the quad from the oval, all right?  So it’s in the front of the quad.  380 W is in the basement.  That seats about 50 people, something like that.  Shouldn’t be a problem.  So both the afternoon sessions, from 2:00 p.m. to 3:30 p.m. and 4:00 p.m. to 5:30 p.m. are there, and then the session from 6:00 p.m. to 7:30 p.m. is here, in Skilling.
+
+</p><p>As far as the material goes for the exam, it goes up through deltas.  You should know – have the properties of delta functions and generalized Fourier transforms.  I’m not gonna go hot and heavy on the theory of distributions or anything like that, but you should be comfortable and familiar with the basic properties of delta functions, as I say, and the idea of the generalized Fourier transform, at least to the extent that you can use it for some common functions like the step function and the unit step function and the signum function, things like that.  Those sorts of things are fair game.
+
+</p><p>What I won’t put on the exam is the next topic that we’re gonna really turn to, not today but shortly, on sampling theory.  So that’ll be coming up, so we won’t have that on the exam.
+
+</p><p>I will provide for you – and again, as I said last time, the hope and the plan for the exam is to have it more conceptually based.  That is to say, you can’t avoid computations completely, naturally, but what I don’t want is I don’t wanna – I’m gonna try not to write questions that involve a lot of details, calculations, in the sense that you get caught in a loop of doing lots of integrations by parts or something like that.
+
+</p><p>That’s not the point.  The point is not to see how well you can integrate.  The point is to see how well you can understand the Fourier transform. 
+
+</p><p>Now again, having said that, it’s also true that you can’t avoid computation completely, so I wanna try to make a balance.  We will provide for you, and it is already posted, has been for a while, the formula sheet.  That’s a formula sheet for the entire course, so we’ll – I’ll make copies of that and bring it to the exam.  That has all sorts of helpful, useful formulas on it.
+
+</p><p>You can bring your – it’s open notes, open book on this, so you can bring that with you.  As I say, things get a little – things get sometimes ridiculous, where students used to bring stacks of like signals and systems books to the exam, and it was just ridiculous, but if you want to, you can do that I suppose, like Shawn’s Outline Series of Signals and Systems, but hey, whatever makes you happy. 
+
+</p><p>So the other thing I was thinking of doing – so that’s question about – that’s the information about the exam.  Any questions on that, on what’s expected or what – how we’re gonna manage it?  I haven’t heard from anybody.  There’s one person who’s gonna be away on a – at a conference, and a couple other people who have some conflicts, but, by and large, having those different times seems to suit everybody all right.
+
+</p><p>We will have class on Wednesday, however.  It’s relentless.  Relentless.  Relentless, but not heartless.  I’m thinking of – what do you think of having the next problem set due – there’s a problem set that’s out there now, and I was thinking of having that due on Friday instead of Wednesday.  Yeah?  Can you endorse that idea?  All right.  Okay.  So I’ll post all this information on the web, of course, but – so we’ll have the current problem set, what is that?  Problem set five or four?
+
+</p><p><b>Student:</b>Five.
+
+</p><p><b>Instructor (Brad Osgood)</b>:Five, okay.  So we’ll have problem set five due on Friday, next Friday, instead of due next Wednesday.  All right?  Yeah?
+
+</p><p><b>Student:</b>Does that cover –
+
+</p><p><b>Instructor (Brad Osgood)</b>:That has some midterm material on it, yeah, it had – because it had some stuff on deltas and had some stuff on generalized Fourier transforms, all right?  Sorry, I just can’t – I can’t match it exactly, but I don’t think there’s anything on there that you couldn’t sort of understand – I mean, there are enough worked examples and things like that in the notes, so I don’t – I really don’t think it should be a problem.
+
+</p><p>I will have the next problem set out, also, by the – I mean there will be another problem set that will be due and I’ll have it posted over the weekend or by Monday, all right?
+
+</p><p>Okay, so I’ll – again, I’ll put all this information up on the web to make it permanent, and send everybody an email, all right?  Anything else on anybody’s mind? 
+
+</p><p>All right, we are going to do, today, an interesting application of the Fourier transform.  It will involve a little bit of deltas, and some properties of delta, and actually it will involve a physical interpretation of delta, which I think is actually quite interesting, but it’s – regardless of that, regardless of the particular ways that delta enters it, but it’s interesting itself, because it’s a nice application of the Fourier transform.  It’s the kind of thing you’ll see in other classes, depending on the direction you go in your further work. 
+
+</p><p>That is, I wanna talk about the Fourier transform and diffraction.  Now diffraction refers to a phenomenon of light, and diffraction refers – for our purposes, it refers – it is analyzed and understood in terms of the wave theory of light, so we’re not gonna get into the raging battle between the wavists and the particalists.  It’s – diffraction for us has to do with interfere – is – I think, pretty much, I consider like identical to interference phenomenon associated with light.
+
+</p><p>So diffraction is one term for it, but it’s pretty much equal to interference patterns that light makes passing through an aperture of light through apertures.  This is not the only way that diffraction can be talked about, but it’s the way we’re gonna talk about it.  Through apertures, through holes.  All right?  
+
+</p><p>So there are a couple things that enter into this.  I’ll show you a picture in just a second.  You have seen pictures of diffraction patterns, I’m sure, before, but I will show you a picture just so we all know what we’re talking about, but I wanna talk about the distinctions, what we’re gonna do and what we’re not gonna do.
+
+</p><p>So it involves light from a distant source, typically from a distant source, and we’ll see how that enters into it, the fact that it’s distant enters it – how the fact that it’s distant enters into it.  All right? 
+
+</p><p>It impinges on a plane, which is usually called the source plane.  I’ll look for other reasons, I’ll – again, I’ll come back to that in a second, where – on which a number of holes are cut, and instead of calling them holes it sounds more scientific if you call them apertures.  
+
+</p><p>So you have a plane with apertures that the light passes through.  The rest of the plane is opaque – part of the plane is opaque and then you have holes that light passes through, and it bends around those holes, and it creates certain characteristic patterns on a plane that is some distance from this, called the image plane.  So at some distance, you have an image plane, all right?  And you see diffraction patterns.  
+
+</p><p>Now I’ll show you a picture in just a second, but right here is where I wanna make a distinction between the different types of diffraction that one studies.  We’re gonna make a number of simplifying assumptions. 
+
+</p><p>We’re gonna assume – well, first of all, we’re gonna do everything in the context of the wave theory of light so, for us, a light is gonna be an oscillating, electromagnetic wave, and really we’re only gonna talk about the electric field part of it, so I am making a certain number of assumptions, but are accurate enough to give you good and helpful understanding – a good and helpful understand, and good and helpful formulas.
+
+</p><p>So we’ll work with – we’ll assume light is an oscillating EM field, although we’re really only gonna talk about the electric field, and we also assume that it’s monochromatic, that there’s only one frequency of light that shining, that’s being diffracted.  That’ll simplify writing things as well.  And we’ll make a couple other assumptions.
+
+</p><p>The other main assumption that you make in diffraction is – has to do with this statement here.  At some distance, you have an image plane upon which the light is incident, all right?  There the distinction is between so called near-field and far-field diffraction.  So the distance of the image plane determines two kinds of diffraction.  
+
+</p><p>One is called far – one is called near-field, which means relative to the wave – and it’s usually relative to the wavelength, let me just say in a second.  Near-field, which means it’s close in, that’s called Frenel diffraction.  Frenel.  I think that’s right.  Diffraction.  
+</p><p>And the other is far-field, so called far-field, which is Fraunhoffer diffraction.  I can only hope I’m spelling those right.
+
+</p><p>And, usually, when you talk about near-field or far-field, you talk about distances measured relative to the wavelength.  It is far away relative to the wavelength of the light or it is close relative to the wavelength of the light, and the other that comes in are the size of the apertures relative to the wavelength.
+
+</p><p>So you measure distances near or far, typically relative to the wavelength.  Distances and the size of the aperture relative to the wavelength.  I’ll make comments about this.  This is – we are not giving, by any means, an exhaustive treatment, all right?  This is just an example of how the Fourier transform comes in in an important and interesting application. 
+
+</p><p>We have a whole course, actually, called Fourier Optics, that does these things in, of course, much greater detail, and goes much farther with it, but I thought you’d be – I thought you’d be interested to see this application, because it’s a very pretty application and it’s nice to see some of the ideas come in, and you’ll see them again, as I say.  If you go in – Stanford has been a leading light in light for years and, in particular, Joe Goodman, who’s an emeritus professor now, wrote a – was a very important figure in the theory of Fourier Optics, and wrote a number of very influential textbooks as well, and of course a lot of research papers, and a lot of the – the course that sort of exists now in Fourier Optics is based, to a large extent, on a lot of Joe’s work.
+
+</p><p>Let me show you a picture so you know what I’m talking about.  You have seen – you have seen diffraction patterns, probably, in physics classes or whatever, but the picture looks something like this, if I can.  Can I show this?  I’m just gonna show this one shot.  I think there’s a picture of this also in the notes.  Looks like that.  Amazing, isn’t it?  There we go.  You can dim this a little bit, so I can – so I actually get the full effect.  Can we dim the lights?  And we – there we go.  All right.  It’s just showing up a little bit.  So this is – what you’re seeing is the image plane.  You’re seeing the pattern of the image plane.  The source is some distance away.  It shines through, in this case, I think it’s just a square aperture, a square slit, that’s showing the pattern, and the things that’s – was remarkable about diffraction patterns that really shocked people, was the bands of light and dark.  That’s the characteristic property.  
+
+</p><p>What you’re really seeing there is the intensity.  You’re seeing the magnitude of the electric field that is representing the light, all right?  Actually, you’re – yeah.  And that’s what instruments measure.  They measure the intensity, or the magnitude, of the electric field.  And what was so surprising to people, when they first started observing these diffraction patterns, and it goes way back into the history of physics, is the intermixing of light and dark bands, because how can light plus light make dark?
+
+</p><p>I mean that – why should – how could there be darkness, when all you’re doing is shining light?  How could that be?  Surely this is not God’s will.  And it was – it was a subject of heated debates, and again – certainly between people who have advocated the particular theory of light, people advocated the wave theory of light. 
+
+</p><p>The wave theory of light initially provided a much better explanation of these diffraction patterns, and that was one of the reasons why it was in ascendancy for so long, because this was a phenomenon that was considered – was not only considered important, was important to understand it that it could be analyzed by using the wave theory of light.  
+
+</p><p>So you have – anybody, I’m just curious, are there – anybody ever work with these sort of diffraction patterns?  There are all sorts of reasons to do it.  I mean they use it for physical measurement of wavelength of light and things like that, or they – and they sometimes just have experiments.  Yeah, how did you –
+
+</p><p><b>Student:</b>[Inaudible].
+
+</p><p><b>Instructor (Brad Osgood)</b>:Yeah.
+
+</p><p><b>Student:</b>The dark parts were to calculate how thick the wafer was, to calculate how hot it was, if we knew its initial temperature and things.
+
+</p><p><b>Instructor (Brad Osgood)</b>:Yeah?  That’s interesting.  Anybody else?  I’m just kind of curious.  Even in Physics labs or something like that, when you were undergraduates, where you did diffraction patterns, diffraction experiments?  It’s kind of cool.  It really is kind of cool.
+
+</p><p>Okay.  All right.  You can show that you can – you can pull up the screen, thanks.  We’re done.  Thank you.  All right.
+
+</p><p>So let me give you the setup, in a little bit more detail.  And, again, what we’re gonna talk about is Fraunhoffer diffraction, although the initial setup doesn’t matter.  You’ll see exactly where this comes in.  It’s a certain approximation that shows you how you can approximate one quantity in terms of another quantity if the distance is large.  You’ll see.  
+
+</p><p>But let me give you the basic setup.  So, again, you have a source of light, however it’s defined or however it’s defined, and it is a great distance from what’s – from the aperture plane.  So the aperture plane is something over here.  This is the aperture plane.  And these holes – it is considered to be opaque except where there are holes.  So the holes are the apertures.  All right?  And the fact that you consider the source very far away has the practical implication that, by the time it reaches the aperture plane, it does so – it’s basically a plain wave coming in, and what that means is that you can assume that the aperture plane is essentially – not essentially, you can assume it’s a so called wave front for the wave, which means that every point here on the plane has the same phase, all right?
+
+</p><p>So the fact that the source – so that’s the first sort of simplifying assumption.  A distant source means, practically, that the aperture plane is a wave front.  That is, the light is coming in as a plane wave, and again, practically what that means is that everything here is the same phase, which means you can ignore the phase, okay?  It’s a wave front.  
+
+</p><p>So the wave has the same phase at all points of the aperture plane.  All these are realistic and reasonable assumptions, all right?  I just wanna spell them out, which means, for all practical purposes, you ignore the phase, you can suppose the phases – you can suppose everything sort of starts from zero at the aperture plane, all right?
+
+</p><p>And furthermore, we’re gonna represent the electric field – now this is the second sort of simplifying assumption, but we’re gonna represent the light by a time oscillating electric field, and we’re gonna use complex exponentials for that.
+
+</p><p>So you represent the light as, say, e times – e is for the electric field, for the magnitude, times e to the two pi i new t.  So e is the strength of the field, and this is the light on the – this is the light on the – not at the source, but the light on the aperture plane, all right?  So on the plane.  Aperture, my writing’s even worse, plane, as e to the pi i new t, so e is the strength of the field and new is the frequency.  So this is where the other assumption comes in that I’m working with monochromatic light, so light of a single frequency.  Frequency.  So again, it’s monochromatic. 
+
+</p><p>All these assumptions can be, to a greater or lesser extent, dropped in more careful and more thorough treatments, but we’re simplifying things just to get to the main punchline, which you’ll see, which is pretty interesting.
+
+</p><p>And we’re also gonna assume that the field strength is constant on this – on the plane, all right?  So we’ll assume that e, the strength of the field, is constant.  So we assume e is constant, say, e naught on the aperture plane. 
+
+</p><p>Okay.  Now some distance away, which I can’t represent too well on the blackboard, is the image plane, over here.  So light starts from the source, hits the aperture plane, and then gets diffracted by the apertures and winds up on the image plane over here.  And the question that we wanna address is, what is the electric field – just think of this in terms of electric field.  What is the electric field at a point on the image plane, okay?  P.  What is the electric field at a point p on the image plane?  All right?  Why it passes through the slits, it gets the p from different paths, and the question is what is the – how do they all add up?  Okay. 
+
+</p><p>So the light gets to p.  The light, that is to say the wave, i.e. the wave, gets to p along different paths, because it is bent when it passes through the – or it seems to be bent when it passes through the apertures, along different paths.  How do they add up?  How do the results add up?  How does it all add up?  I want you to put it that way. 
+
+</p><p>All right.  Now, classically, the way to address this problem is what’s called Huygens’ Principle.  It goes way back, because it goes back to Huygens’, and I don’t know how it was initially enunciated, but the way it’s – the way I’ll talk about it, and again, without trying to be terribly precise here, to analyze this you approach this via Huygens’ Principle.  Huygens’.  This is a challenge.  
+
+</p><p>Huygens’ Principle, which says that every point in the aperture, every point of a wave front, can be itself regarded as a new source, okay?  Each point of a wave front, and by assumption, the aperture plane is a wave front, all right?  So – and you have all these little – you imagine that this is made up of a bunch of little points, and each point there on the wave front – each point in the aperture can be – each point on a wave front can be regarded as a new source, all right?
+
+</p><p>You see what happens as a result of that.  You see what happens over on the image plane as a result of light coming from a point here, regarded as a new source, and then you add them all up.  You add up – that is to say, you integrate all these – the effects of all these sources.  
+
+</p><p>Now Huygens’ Principle has been criticized, and it’s certainly not the modern view, but it’s still applied, because it produces results that are intuitive and accurate enough.  It’s interesting, and I am by no means an expert on this – it’s interesting to really read different treatments of this – older treatments of it, more modern treatments of it and so on, to see how Huygens’ Principle has faired, to see how the whole approach to diffraction has faired, and so on, but this is the way that it was sort of classically analyzed, and it’s certainly the way we’re gonna do it.  I’m not gonna say anything more than this, but you’ll see how I’m gonna put it to use. 
+
+</p><p>As a matter of a fact, I think I gave a reference in the notes to a book by Melvin Schwartz, called Principles of Electrodynamics or something like that.  I can’t remember.  It’s in the notes.  And he actually has a very interesting treatment of all these things.  He tries to take a relativistic approach right from the beginning, so it’s a very mathematical book and it tries to – it tries to put things in a certain context, and he has sort of scathing criticisms of Huygens’ Principle and so on, but he’s not above using it occasionally.
+
+</p><p>So here’s how we’re gonna apply this.  So once again, here is – so forget about the source.  The source is infinitely far away.  Everything now takes place between the aperture plane and the image plane, all right?  So I wanna introduce coordinates on the aperture plane.  As a matter of a fact, let me just focus on one aperture.  So here’s, say, the origin of the aperture plane, and here is a point x on the aperture plane, and here – and I take a very – imagine I take a very thin slice, so this may be part of a bigger aperture.  Let me do it like this.  But I take a very thin slice, say of width d x.  
+
+</p><p>All right, now this is a sideways view of this.  We’re essentially going to turn this into a one dimensional problem.  If you want, you can consider the plane – the aperture plane coming out like this, and I’m just gonna – I’m gonna take a aperture of dimension one in this direction and dimension d x in this direction, all right?  So it essentially reduces this to a one dimensional problem.  That’s another simplification, but it’s – again, it’s – they’re reasonable simplifications, depending on the dimensions of the actual physical problem.
+
+</p><p>All right, and so here’s p over here, so light comes out of x, or out of this little slice, and reaches p, all right?  The field here – the field at x is roughly – well the field – the field – let me say the field associated with the small slice is about – I’ll even put the – let me write it up here.  The strength of the field in the slice of size d x at x is about e naught the strength times e to the two pi i new t times d x.  So the field strength is roughly – the field strength is constant on the plane, so it’s e naught d x of it in the particular little slice, and then I multiply it by the – it’s time varying, so it’s e to the two pi i new t, okay?
+
+</p><p>Now – and so I’m assuming I have zero phase on the aperture plane.  Okay, now what happens when it reaches the image plane?  There’s a decrease in the magnitude of e by one over the distance, but that’s not the main effect, all right?  
+
+</p><p>The main change in going from – that is, the main effect, really, maybe I should say, the main effect in going from x to p, over a certain distance, is the change in phase.  And what we have to – yeah?
+
+</p><p><b>Student:</b>Is the t up there – is that supposed to be an x or is that t for something else?
+
+</p><p><b>Instructor (Brad Osgood)</b>:T is time, because it’s a time varying field.
+
+</p><p><b>Student:</b>Okay.
+
+</p><p><b>Instructor (Brad Osgood)</b>:All right, so like, it’s an oscillating electric field, okay?  So t is time.  It’s actually gonna come out.  That’s actually not gonna turn out to be an important thing, but that’s – you represent the field that way.  I should have said, by the way, I’m sorry, as per usual, in this case, you represent real quantities by complex exponential, so the actual electric field would be the real part of that, but – as is common in this case.  You usually sometimes call this the analytic version of the signal or the analytic version of the field when you represent it by a complex exponential.  The actual field would be, say, the real part of that, but we’re sort of using complex quantities.  I can do it without thinking about it.  We’re used to representing real quantities by complex quantities.
+
+</p><p>Now – and if it reaches p from all sorts of different paths, then what you want to take in account – take into account, is the phase change that is associated with the different paths.  
+
+</p><p>So say this is a distance r, say it travels a distance r, all right?  So what is the phase change in traveling a distance r.  R from x to p.  Well how many cycles does it go through?  Think in terms of – measure this in terms of wavelengths.  If it goes through one wavelength, then it goes through one cycle.  If it goes through two wavelengths, it goes through two cycles.  If it goes a distance r, r, the wave goes through r over lambda cycles, where lambda here is the wavelength.
+
+</p><p>You can – so again, wavelength.  It goes through – if r is equal to lambda, then it goes through one cycle.  One wavelength goes through one cycle.  If it goes through two wavelengths, it goes through two cycles, and so on.  If it goes through half a wavelength, it goes through half a cycle.  In general, if it goes through distance r, then the number of cycles it goes through is r compared to the wavelength.  R over the wavelength.  R over lambda.  You can even work that out with formulas if you want, but that’s intuitively what’s going on here.
+
+</p><p>Okay, so what’s the phase change?  So the phase change – so the phase change is two pi r over lambda, all right?  And then – and so the field or the – I should maybe say field – let me write it down, then I’ll say something about a field, at p due to the field at x is – let me write it like this.  D e is – a little bit of change in the field – I’m gonna – the differential of the field is e naught times e to the – it’s still oscillating at the same rate.  That’s not changing.  It’s still the same frequency, so it’s e to the two pi i new t – I’m gonna need more space here, I can tell – is e naught e to the two pi i new t is – it’s still monochromatic.  What’s happened here is the phase change.  E to the minus two pi i r over lambda.  If I represent the phase change also that way, as a complex exponential, times d x.  That’s the key expression.  That’s the key expression.  
+
+</p><p>There’s been a drop off – drop off in the magnitude of the field, that’s true, but that pales in effect in comparison to the change in the phase.  Okay.
+
+</p><p>So what is the total field?  Is the integral of this expression.  So it’s the integral over all the apertures.  This is the field at p, fell from all the different sources.  So it gets the p from all different source – from all different paths.  E naught times e to the two pi i new t, e to the minus two pi i r over lambda d x.  So I’m integrating over the aperture plane.  I’m integrating with respect to x.  X is a variable that describes the location on the aperture plane.  So I could just say, aperture – I’m saying integrating over the aperture, I should say I’m really thinking about integrating over the aperture plane, but the only time the – you get a non-zero contribution is when – because the field – you can regard the field as being a zero other than at the apertures, because the – other than the – other than the apertures, the plane is opaque.  The aperture plane is opaque.
+
+</p><p>All right, so I can pull out these constants here, and it’s really – this is the part that depends on x, because r depends on x, all right?  On x.  So that’s where the dependence is coming in in the integration.  Not here.  Not in the time variable.  All right.  So as a matter of fact, I can pull that out, and I can more or less ignore it in the rest of the discussion.
+
+</p><p>So I can write this as e equals e naught.  That’s a constant.  I assume that’s a constant – times e to the two pi i new t times the integral over the apertures of e to the minus two pi i r over lambda d x.  All right.
+
+</p><p>Now I should also say that what you observe – what you see with your eyes or what you measure with instruments is the magnitude of e.  So, in particular, the time varying part of that goes away because the time varying part of that, in the – under the assumptions we have, monochromatic and so on, is just a complex exponential which has magnitude one.  So you see – you measure, measure, the magnitude of e.  
+
+</p><p>So the quantity of interest here really is the integral, not the stuff out in front of it, okay?  Is this integral over the apertures of e to the minus two pi i r over lambda d x.  Now this is not a useful expression so far, it’s too complicated.  Here’s where the approximation comes in.  So this is not useful.  I mean, maybe there are times when you can write it out more carefully and try to evaluate the integral, but generally, sort of as a principle, as a way to understand the phenomenon, it’s not so useful – that is, you need an additional assumption to make it a useful expression, and that’s where this Fraunhoffer approximation comes in.
+
+</p><p>And so now we bring in the so called Fraunhoffer approximation, and here’s what that means.  So let me, again, draw the picture over here.  Here’s the aperture plane over here, here’s x, here’s the origin of the aperture plane, here’s the image plane, here’s p, that is what – that’s what we calculated.  We calculated the field at p due to all the ways that light reaches it from all possible points on the aperture plane.  Let’s call this distance r naught.  So that’s the distance from zero to p.  That’s a fixed distance.  Here’s r, all right?  And I wanna be sure I write this right, get this right.  Here is theta.  Then this distance here – I’m sorry for being careful.  I’m looking at my notes carefully here, but I don’t wanna screw anything up.  That’s x sine theta.  That little length in there is x sine theta. 
+
+</p><p>We’re gonna assume that r, this distance, is much greater than this distance, than x.  That’s the Fraunhoffer approximation.  That’s the Fraunhoffer assumption.  You’re gonna assume that r is much greater than x.  By that assumption, this little bit is such that r minus – if I take r naught minus x sine theta, that’s approximately r.  That is, the operational effect of this assumption is that r naught minus x sine theta is approximately r for all the different values of x on the aperture, so there’s actually several assumptions here.  The apertures shouldn’t be too big, they shouldn’t be too far away, but at any rate, the distance of the image plane should be very much farther than whatever x is, wherever x is varying on the aperture plane.  So way far away.  And under that assumption, r naught minus x sine theta is approximately – so the fixed distance from zero to p – remember, we’re calculating the electric field just at a particular point in the image plane, at a point p in the image plane, from all the different contributions, and at that point, r naught minus x sine theta is approximately r.  That’s the expression that we plug into the integral.  
+
+</p><p>So you plug this into the integral, giving the field at p, and what do you get?  You get – I don’t know if I’m erasing it here, but I’ll write it out in just a second.  Forgetting about the constants out front, you get the integral over the apertures of e to the minus two pi i r over lambda, so it’s one over lambda times – and r is approximately r naught, which is fixed, minus x sine theta.  So it’s r naught minus x sine theta d x.  D x.  Right.  Okay? 
+
+</p><p>Split this up – again, I’m forgetting about the constants out front, because that’s not so – that’s not important.  It’s the integral, this integral, that’s important, and even in this integral now, we can pull out another constant that’s gonna be of absolute value one, so it won’t contribute to the magnitude.  So it’s the integral over the apertures again of e to the minus two pi i r naught over lambda, so that doesn’t depend on x, times e to the minus two pi i x sine theta – excuse me, plus two pi i x sine theta over lambda d x.  I haven’t done anything except plug that in. 
+
+</p><p>Now pull this out, because that doesn’t depend on x again.  R naught is the fixed distance from zero to p, and we’re calculating everything – we’re calculating the strength of the field at p.  This is equal to the integral over the apertures – oops, I forgot to pull up the cosile.  E to the minus two pi i r naught over lambda times the integral over the apertures of e to the plus two pi i x sine theta over lambda d x.  Okay. 
+
+</p><p>Now, it is common, in the biz, to introduce another variable, an auxiliary variable, that replaces sine theta but by just another name.  So introduce p equals sine theta over lambda.  One always talk about the – one always talks about diffraction through an angle, and the angle is theta here, but this is the variable that you introduce, sine theta over lambda, so that the integral becomes – and forget about the constant out front again.  The constant out front has absolute value one.  You only measure the magnitude, you only see the magnitude, so forget about that constant.  Let me just concentrate on the integral. 
+
+</p><p>So it becomes the integral – I say equals, becomes the integral over the apertures of e to the two pi i x p v x.  Okay.  Almost there.  Now, now, now, now, let’s introduce the aperture function, so to speak.  So something like a of x is one if x is in an aperture, and zero otherwise, okay?  You’re only integrating over the apertures.  That’s the only place where the field is non-zero, all right?  Then write – then I could write this integral a little bit differently.  I can imagine integrating over the entire aperture plane, that is to say, from x point – from minus infinity to infinity of a of x times this, because a of x is only one when I’m in an aperture, and it’s zero when I’m not in aperture.  So I can write the integral as the integral for minus infinity to infinity of e to the two pi i x p a of x d x, okay?  
+
+</p><p>And now what do we recognize?  This is, of course, nothing other than the inverse Fourier transform of the aperture function at p.  The dual variable here, the variable in the Fourier transform, the form of – the two variables in the Fourier transform are x and p.  P is sine theta over lambda, so p has to do with the geometry of the situation, but as far as the – as far as writing the formula goes, if you recognize this is a Fourier transform, the variables are called x and p, and this is the inverse Fourier transform at a of p.  
+
+</p><p>Now, I have to make a couple of comments here, so I take a deep breath.  You know, I said once that people had different conventions about what they called the Fourier transform, where they put the two pis and sometimes either where they put the plus and where they put the minus?  You remember I said that?  And different fields, say, have different conventions?  Well, in physics, it’s more common to define this as the Fourier transform, and the integral with the minus sign is the inverse Fourier transform, and so, if you were in physics and somebody wrote down this formula, they wouldn’t write, this is the inverse Fourier transform of the aperture function, they would write, it’s the Fourier transform of the aperture function, and as far as I know, this may be the reason, in physics, why they use that particular convention for the Fourier transform.  I don’t know if that’s true or not, but it is a reason for it.
+
+</p><p>So if you would – if I would have defined the Fourier transform differently, if I would have defined the Fourier transform with a plus sign here instead of a minus sign, then I would have had, maybe, the more elegant result saying that the strength of the field at p, the value of the field at p, is proportional to the Fourier transform. 
+
+</p><p>Now in the notes, actually, I fudged this.  I wrote things a little bit differently, so I wound up with a Fourier transform, but that’s really not true.  So what I gave you here is – it’s only a question of differing between the plus sign and the minus sign, so I haven’t had the, somehow, nerve to go back and change the way I wrote it in the notes because I really want it to come out in terms of Fourier transform, but I had to be honest.  So this is our result.  
+
+</p><p>Now it’s pretty – this is a wonderful result.  This is a wonderful, intuitive result.  It took us a while to get here, but what it says is that, under the Fraunhoffer approximation, so for far-field diffraction, the strength of the field at the image plane is the Fourier – think of it just the Fourier transform is the Fourier transform of the aperture function, all right?
+
+</p><p>You have an aperture plane with a bunch of slits cut into it, and you have a diffraction pattern.  What do you see?  You see a bunch of bands of white and black.  You see light and dark.  What are those bands?  Analytically, they are given by the magnitude of the Fourier transform of the aperture function.  That’s the takeaway headline.  For under the – for far-field diffraction, the magnitude, which is what you see, or the – maybe let me put it this way.  The intensity of the light, because that’s what you’re seeing, is the magnitude of the Fourier transform of the aperture function.  
+
+</p><p>That’s the summary.  That’s the headline.  And that’s a very valuable thing to know if you go into this area.  If you don’t go into this area, who cares, but if you go into this area, or if you want to have a conversation about it, this is very important, and I was just talking with a friend of mine, Marty Fejer, who’s in applied physics, just the other day, and we were talking about what I was doing in the class, and I was saying that I was gonna do this, and he was very pleased to hear that, because what he finds is that students today, when they’re confronted with a diffraction problem, will try to solve things numerically, they’ll set up a MATLAB program and they’ll do all sorts of computation, but what he really wants them to be able to say is this sentence, at least as a starting point to get some intuition for what the field should look like, think about what the apertures will look like.  You have all this experience taking Fourier transforms.  
+
+</p><p>That’ll tell you – that’ll give you a good sense of what the – what you should be seeing on the image plane.  I mean, you can do more detailed computations, numerical approximations and so on, but starting with this as the principle of what the field should look like, what the intensity – what the light should look like that you see, is given by the Fourier transform of the aperture function.  It’s an extremely nice results.
+
+</p><p>So let’s do some examples of this.  Let’s do single slit diffraction, the most basic diffraction experiment.  A single slit.  What is a slit?  A slit of width, say, a, is given by a – and let’s say just center it at the origin, so this is at the origin, then the aperture function is described by the rectangle function, pi sub a of x.  That’s a function which is one from minus a over two to a over two, and it’s zero otherwise, so the aperture is pi sub a of x.  That’s the function that describes a single slit.  
+
+</p><p>So what do you see on the image plane?  Sorry?
+
+</p><p><b>Student:</b>Is that one minus?
+
+</p><p><b>Instructor (Brad Osgood)</b>:No, it’s one – the rectangle function is one on the aperture and zero off the aperture, okay?  So pi is one when x is between minus a over two and a over two, and it’s zero outside that.  
+
+</p><p>So what is the intensity of the light?  So the light – the intensity of the light is the Fourier transform, and this is the inverse Fourier transform.  This amounts to the same thing.  Intensity of the light on the image plane is – what is the Fourier transform of this?  Is – right down here, is a sink – let me write it down in terms of variables.  A sine theta over lambda, writing p equals sine theta over – over lambda.  
+
+</p><p>You see – well, excuse me.  I’m sorry.  The Fourier transform is given by this.  The intensity is the square of that.  Fourier transform is that, so the intensity you see – essentially the magnitude of this, all right?  So you see the square of this.  You see the magnitude, so absolute value of this.  So why do you see light so – why do you see bands of light and dark?  Because that’s what the sink function is like.  The sink function is big in some places and small in some other places, it even has zeros.  Now the zeros are the places where it’s dark.  You take the absolute value of this thing to actually see the magnitude, so you’re always seeing either some light or black, all right?  But you’re seeing – it decays.  It’s bright in the middle, then it has all these sort of little variable bands of light and dark separated by – separated by black, separated by zero intensity, and that’s because it’s that Fourier transform.  It’s given by the Fourier transform of the rectangle function.  Ain’t that cool?  I think it’s cool.
+
+</p><p>Now let me take another example.  Let’s tie in – I said I wanted to bring in delta functions here, so let me do that now, then I won’t say too much more today.  We’re gonna do this again next – we’re gonna take this up again next time, a little bit even more generally, and we’re gonna talk about crystallography, and we’ll talk about sort of one dimensional crystals.  We’ll do higher dimensions a little later in the course, where I’ll bring the delta function in even more definitely.
+
+</p><p>Suppose I have a point source, all right?  Suppose the aperture is a point source, like a pinhole, but smaller than a pinhole.  A point.  Then what’s a good – what’s a reasonable approximation of the aperture function?  Delta.  Then a of x is delta of x.  
+
+</p><p>Now, before I write down the formula, before I write down the formula, if you have a point source on an image plane – on the aperture plane, and you put an image plane far away from it, what do you expect the illumination to be on the image plane? 
+
+</p><p><b>Student:</b>Circles.
+
+</p><p><b>Instructor (Brad Osgood)</b>:Pardon me?
+
+</p><p><b>Student:</b>Circles?
+
+</p><p><b>Instructor (Brad Osgood)</b>:No.  A circle would be a real – I mean, what you get on the image plane of circles would be a real circular aperture, but this is a point aperture.  
+
+</p><p><b>Student:</b>Constant.
+
+</p><p><b>Instructor (Brad Osgood)</b>:Constant, and the image plane is far away.  You would expect –
+
+</p><p><b>Student:</b>Constant.
+
+</p><p><b>Instructor (Brad Osgood)</b>:Constant.  You would expect a constant illumination.  You would expect the illumination on the image plane – if the image plane is far away, it would just be uniformly illuminated.  Uniformly eliminated.  Eliminated, did I say?  Uniformly illuminated.  That is a physical interpretation of the fact that the Fourier transform of the delta function is one.  
+
+</p><p>This is a physical interpretation of the Fourier transform of the delta function or the inverse Fourier transform of the delta function, it amounts to the same thing, is one, because the intensity of the light you see on the image plane is the magnitude of the Fourier transform of the aperture function.  The aperture function is given by a delta function.  It’s a point source, and its Fourier transform is one.  You expect uniform illumination on the image plane.  Ain’t that cool?  I think that’s cool.  I think that’s cool.
+
+</p><p>I’ll do one more example.  I’ll do it over here.  The famous – one of the things that really got people freaked out was the so called double slit experiment of Young, and I won’t talk about the experiment.  I won’t talk about the experiment or what the results were, but that was a famous early experiment in light, so Young’s double slits.  You can look this up.  And, of course, talking about diffraction, light diffracting through double – through two slits, or talking about particles going through two slits, it’s been a famous experiment in physics forever.  
+
+</p><p>So the situation might be something like this.  Might be where I have two slits that are modeled by two rectangle functions, all right?  Say, a distance – say the distance between them is – I’m gonna have my – I’m gonna stick with my notes here.  So say the distance between them is b, and they’re each of width a.  So it’s given by – the aperture function would be given by the sum of two rectangle functions is pi sub a of x minus b over two pi sub a plus pi sub a x plus b over two.  
+
+</p><p>So the distance is b.  The distance between them – say this is at height plus b over two, this is at – this is centered at plus b over two, this is centered at minus b over two, so it’s easy to write down the aperture function.  It’s just the sum of two rectangle functions.  It’s one – they don’t overlap.  It’s one when you’re in either aperture, and it is zero outside it, okay?  And you’re either in one aperture or the other aperture or outside it.  And what is the Fourier transform?  What do you get?  And I think I have a picture of this.  I’m sorry I didn’t check.  I know I have at least a graph of this thing in the notes.  I don’t think I have a picture of the actual diffraction experiment, but you can find it.  You can track it down.  
+
+</p><p>So the Fourier transform of this – we know how to do this.  This is the module – this a modulated version of the – or it’s a shifted version of the – it’s the sum of two shifts of the rectangle function, and we know how to find that with – via the modulation theorem.  In the notes, I talk about how to do this by using the delta function, actually, or you can to it this – well, I’ll just write down the result, because we gotta go.  
+
+</p><p>So you get – and I’ll just – a sink a times p, so p is again sine theta over lambda times cosine of two cosine pi b p.  So, again, here p is equal to sine theta of lambda.  Theta is the angle that you are diffracting through at p, okay?  Theta makes at p.  And that – you should recognize this.  This cosine factor comes in because of the modulation, because they’re – because of the shift plus and minus, via plus b over two and minus b over two, and the sink comes in because that’s the Fourier transform of the rectangle function.  The stretch rectangle function.
+
+</p><p>In the notes, I mentioned – I wanted to bring – actually use this as an application of the delta function, because I wanted to write this is as a convolution of two shifted deltas, but I’ll do that  next time or I’ll talk a little bit more generally about this next time.  I just wanted to give this result too, because this is another famous experiment and famous formula in physics, what the diffraction pattern for the double slit experiment is.  So look that up, I’m sure you can google this, and you’ll get pictures that correspond just to this sort of function.  
+
+</p><p>So it’s a physical – I should have said, actually, this is a physical interpretation of the Fourier transform of the delta function is the constant function one.  The single slit, or the sort of double slits, are physical interpretations, physical manifestations, of the sink function.  You actually see them coming up in diffraction experiments.  It’s cool.  All right, that’ll be it for today.  Then on Monday we’re gonna take this a step further, talk about crystallography, and that will actually lead us into a discussion of sampling.  You’ll see.  Thank you very much.
+</p><p>
+[End of Audio]
+</p><p>
+Duration: 56 minutes
+</p><p>
+
+</html>

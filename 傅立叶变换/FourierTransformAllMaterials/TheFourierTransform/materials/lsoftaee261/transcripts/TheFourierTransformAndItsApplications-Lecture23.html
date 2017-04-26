@@ -1,0 +1,331 @@
+<html>
+TheFourierTransformAndItsApplications-Lecture23
+<p>
+</p><p><b>Instructor (Brad Osgood)</b>:Are we on?  I can’t see.  It looks kinda dark.  I don’t know.  It looks a little dim there.
+
+</p><p>All right.  So today – assuming this is working – or assuming even it’s not working – we are going to spend a little bit of time over the next couple days talking about linear systems, particularly linear time invariance systems because those are the ones that are most naturally associated with the Fourier Transform and can be understood and analyzed – some aspects of them – in terms of the Fourier Transform.  
+
+</p><p>But before doing that, we wanna talk about the general set up – the idea of linear systems in general – and talk about some of their general properties, as fascinating as they are. 
+
+</p><p>Now it’s a pretty limited treatment that we’re gonna do of this.  So I would say this is more an appreciation rather than anything like a detailed study.  It’s a vast field, and in many ways, I think it was one of the defining fields of the 20th century.  The 20th century, in many ways, was a century of – I think I even said this in the – made this bold statement in the notes.  The 20th century was a century of linearity in a lot of ways.
+
+</p><p>The 21st century – I say this as a sweeping bold statement, but I stand by it.  The 21st century may be the century of non-linearity.  We don’t know yet, but non-linear problems are becoming increasingly more trackable because of computational techniques.  
+
+One of the reasons why linear problems were studied so extensively and were so useful is because a lot can be done sort of theoretically even if you couldn’t compute.  And then, of course, later on when computational techniques – computational power was there, then they became even more – they were able to be exploited even more.  
+
+What I wanna get to is the connection between the Fourier Transform and linear systems, and that’s gonna be primarily along the lines – so we definitely wanna see how the Fourier Transform applies to linear systems, again in a fairly limited way.
+</p><p>
+And here, the main ideas are talking about the impulse response and the transfer function.  These are the sort of major topics that I wanna be sure that we hit.  The impulse response and the transfer function – these are terms, actually, we’ve used already, but now we’re gonna see them a little bit more systematically and a little bit more generally.  And, again, they’re probably terms and probably ideas that you’ve run across before if you’ve had some of this material earlier in singles and systems.
+
+And the other thing is – again, somewhat limited and maybe even to a lesser extent – is to talk a little bit about complex exponentials appearing as IGen functions of certain linear systems – time invariance systems.
+
+So we’ll put that up here.
+</p><p>
+Complex exponentials as IGen functions.  I’ll explain the term later if you haven’t heard it, although I suspect many of you have.  IGen functions of linear time invariance systems.
+
+All right.  So this is, I guess, sort of a preview of the main things that we wanna be – we wanna discuss.  But before getting that – before doing that, I do have to do a certain amount of background work and frame things in somewhat general terms.  So let’s get the basic definitions in the picture.
+
+First a basic definition of a linear system.  So a linear system for us is a method of associating an output to an input that satisfies the principle of super position.  All right?  So it’s a very general concept.  It’s a mapping from inputs to outputs.  In other words, it’s a function.  But this is usually the engineering terminology that’s associate with it.  Outputs that satisfies the principles of super position.
+
+And you know what that is, but I will write it down.  Super – not supervision.  Super position.  I get it.  I’ll get it.  Super position.
+</p><p>
+So you have – you think of the linear system L as a black box.  It takes an input V to an output W, and to say this has the principle super position says that if you add signals, then the – add the inputs, and the outputs also add.  If you scale the inputs, then the outputs also scale.
+
+So it says that L of V1 plus V2 – whatever their nature – is L of V1 plus L of V2, and it says that L of alpha times V is alpha times L of V.  
+
+By the way, it’s sort of a common convention here, when you’re dealing with linear systems, not to write the parenthesis because it’s supposed to be reminiscent of matrix multiplication where you don’t always write the parenthesis when you’re multiplying by a matrix.  As a matter of fact, I’ll have more to say about that in just a little bit.  All right?
+</p><p>
+That’s the definition of linearity.  To say that it’s a system is just to say that it’s a mapping from inputs to outputs.  Again, that doesn’t really say very much.  Everything we study is sort of a mapping from inputs to outputs, but this extra condition of linearity is what makes it interesting.  And it took a long time before this simple principle was isolated for special attention, but it turned out to be extremely valuable.  I mean, nature provides you with many varied phenomena, and to make some progress, you have to somehow isolate what’s common to the various phenomena.  
+
+And again in mathematics, the way it works is – in the applications of mathematics, you wanna turn that around and turn that into a – turn around the solution of what you observe and turn that into a definition.  So the definition that came from studying many different phenomena in many different contexts was this simple notion of linearity or super position – same thing.  All right?
+
+So it really is quite striking how fundamental and important these simple conditions turned out to be in so many different contexts.  And that’s really, I say, almost defines a lot of the applications of mathematics – practical applications of mathematics in the 20th century – just isolating systems that satisfy this sort of property.
+</p><p>
+Now, there are additional properties that it might satisfy, and we’ll talk about some of them.  But the basic property of super position is the one that really started the whole ball rolling.  Okay?
+
+I should say, as an extension of this, if you have finite sums, then I can take L applied to, say, I equals one to N of alpha I times VI, then that’s the sum of – so that’s a linear combination of the inputs, and what linearity says is linear combination of the inputs go with the linear combination of the outputs.  This is a sum from I equals one to N of alpha I times L of VI.  
+
+Now it’s also true, in most cases, that this extends to infinite sums.  But any time you deal with infinite sums, you have to deal with questions of conversions and extra properties, the operators – we are not gonna make a big deal out of this.  I won’t tell you anything that’s not true, I hope.  But again, I’m not gonna always take the assumptions carefully.  You can extend these ideas to infinite sums and even to intervals, which we will talk about a little bit.  But generally, that requires additional assumptions on the operator, L.  Which again, I’m not gonna make – and usually, assumptions are fairly mild, all right?  That are gonna be satisfied in any real applications.  
+
+The basic assumption that you often make, and again, without really talking about it in detail, is you assume continuity – some sort of continuity properties.  Any time limiting operations are involved – we’ve seen this in a number of instances – there has to be some extra assumption on the operations you’re working with.  And it’s generally some sort of continuity assumption that allows you to take limits.  So you assume some kind of continuity.
+</p><p>
+But the problem is defining what it is – defining what continuity means and so on and so – I’m not gonna get into it.  And again, it’s not gonna be an issue for us, but I thought I ought to mention it by – to be honest.
+
+Now what’s a basic example of anytime you learn a new concept, you should have – or even revisit a familiar concept – you should have examples in mind.  What is an example of a linear system?  There is actually only one example of a linear system.  They’re all the same.  It is the relationship of direct proportionality.  The outputs are directly proportional to the inputs.  L of V is equal to alpha times V.  All right?  
+
+That is certainly linear.  It certainly satisfies the properties of super position.  L of V1V2 is alpha times V1 plus V2.  So that’s alpha times V1 plus alpha times V2.  So that’s L of V1 plus L of V2.  And likewise, if I scale, I actually call that alpha there.  But I’m thinking of alpha as just a constant here.  L of, say, A times V is equal to A times L of V for the same reason.  All right?
+
+The relationship of direct proportionality is the prototype – the archetype – for a linear system.  In fact, it’s the only example.  All right?  All linear systems essentially can be understood in terms of direct proportionality.  That’s one of the things that I wanna convince you of.  That’s one of the things that I wanna try to explain.  It’s the only example.  
+</p><p>
+And that’s sort of a bold statement, but I stand by it.  Maybe a little shakily, but I stand by it.  Say all linear systems say [inaudible] back somehow to the operation of direct proportionality.  All right?  So don’t lose sight of that.  
+
+So for example – now, it can be very – it can look very general, all right?  It can look very general.  Direct proportionality is also known as multiplication.  So any linear system that is given by multiplication – any system that is given by multiplication is a linear system.  All right?
+
+So a little bit more generally is multiplication.  That is to say you can think of multiplying by a constant, but if your signal is not a constant, but a function of T or a function of X, then I can multiply it by another function.  So L of V of T, I can multiply by alpha T times V of T.  Okay?
+
+The constant proportionality doesn’t have to be constant.  It can also depend on T.  But nevertheless, the relationship is one of direct proportionality.  And for the same simple reason as up here, that defines a linear system – linear.  
+</p><p>
+So when there are many such examples of that – practical examples of that – a switch!  A switch can be models of a linear system.  If it’s on for a certain duration of time, then that’s multiplication by, say, a rectangle function of a certain duration.  So EG – a switch – L of V is – the L of V of T is, say, a rectangle function of duration T times VT, a duration A.  All right?  So you switch on for duration A.  Then you switch off.  On for duration A.  
+
+Now you don’t necessarily think of flipping the switch as a linear operation, but it is.  Why?  Because it’s multiplication.  
+
+You could – somebody could say to you, “Verify that the act of switching on a light bulb is a linear operation.”
+
+But the fact is that it’s modeled mathematically by multiplication by a function, which is one for a certain period of time and zero for the rest of the time.  And as multiplication, it is the operation – it is the principle – it is just expressing direct proportionality, and that’s always linear.
+</p><p>
+Sampling is a linear operation.  Sampling at a certain rate L of V of T would be – could be a Shaw function of spacing T times V of T because [inaudible] spacing P times V of T.  All right?  It’s multiplication.  It’s direct proportion.  It’s linear.  
+
+So again, somebody could say to you, “Say, is it true that the sample of the sum of two functions is the sum of the sample functions?”
+
+And you might be puzzled by that question, or you might – that might take you a while to sort it out.  You might try to show something.  I don’t know what you might try to show.  You might try to show that sort of directly, but in fact, yes it must be true that the sum of two sample functions – the sample of the sum of two functions is the sum of the sample functions.  All right?
+
+But that’s true because the relationship – because sampling – the act of sampling is a linear operation – is a linear system.  Okay?  It’s multiplication.  It’s direct proportion.
+</p><p>
+Now, a slight generalization of direct proportion is direct proportion plus adding up the results.  That is, to say, matrix multiplication.  I should say slight, but important, generalization.  Generalization is – well, let’s say direct proportion plus adding two linear operations plus adding.  And what I have in mind here is matrix multiplication.  So i.e. matrix multiplication.  All right?
+
+If I have an N-by-N matrix, say A is – and let me see if I can even do this more generally – say an N by M matrix, all right?  So it’s N rows by M columns and V is an M vector, so it’s a column vector with M rows.  Then A times V is an N vector, and the operation of multiplying the matrix, say, by the column vector V is a linear operation.  It is a combination exactly of direct proportion or multiplication with adding.  
+
+So what is it?
+
+If you write A as the matrix, say, AIJ so it’s mixed by columns and rows, then A times V the [inaudible] entry is a sum over J – J equals one to N – J equals one to N – AIJVJ, isn’t that right?  
+
+Probably not.  Let’s see.  Do I have an M?  I go across the number of pies, and N by M – I hate this stuff.  Man, I can never get this right.
+</p><p>
+N by M matrix, so – yeah.  Right, M columns.  Right, okay.  That’s fine.  That gives you all the entries.  If it does, fine.  If it doesn’t, then switch M and N.  Okay.
+
+Each component is multiplied by J – that’s direct proportionality – and then they’re all added up.  And as you know, the basic property of matrix multiplication is that A applied to the sum of two vectors is A of V plus A of W.  And A of a scale times V is alpha times A of V.  Okay?
+
+It’s a slight generalization, but it turns out to be, actually, a crucial generalization.  And it comes up in all sorts of different applications.  
+</p><p>
+Those of you who are taking 266 [inaudible] have done nothing but study matrix multiplication.  Well, that may be a little bit of an extreme statement, right?  
+
+So EGE 263 where you study the linear dynamical system X dot is equal to AX, and you solve that.  Say X of zero is equal to V in initial condition.  All right?  Then solve by X of T equals E to the T times A times X of zero, which is V.  All right?  It’s a matrix times the fixed vector V gives you how the system evolves in time.  All right?  And you wanna be able to compute that, and you wanna be able to study that.  And you spend your life doing that.  Many people do.
+
+Now, again, without going into detail, now – and we’ll say a little bit more about this later – the property of linearity is extremely general.  There are special cases that are important, some of which I’m sure you’ve seen.  So let me just mention special linear systems – let’s just stick with the case of matrix multiplication right now.  All right?  
+</p><p>
+So special – linear systems with special properties derive from the special property of the matrix of A.  So for example, some of the main examples are – some of the most important examples are, for example, if A is symmetric, then you sometimes call it a self-adjoint system or a symmetric system.  So A – to say that A is symmetric is to say that it’s equal to its transpose.  So for example, if A is symmetric, that’s a special type of linear system.  As a matter of fact, I’ll tell you why that’s important in just a second.  [Inaudible] transpose is equal to A.  
+
+A can be – or hermission is the complex version of this, where the condition is A star is equal to A.  So this is the complex case.  All right?  That is A star is equal to the conjugate transpose.  
+
+These are both very important special cases.  They come up often enough, so again, it was important to single them out for special study.  
+</p><p>
+Or another possibility – those are, maybe, the two main ones.  Another possibility is A can be unitary or foginal.  So if A unitary means that A times its conjugate transpose – its adjoint – is equal to the identity or A star times A is equal to the identity.  
+
+I’m talking about – I should say here, I’m talking about square matrices – a N-by-N matrix.  So it’s square.  Okay?
+
+Now, a very important problem and a very important way of – and we’ll – again, we’re gonna talk about this when we talk more about general linear systems – a very important approach to understanding the properties of linear systems is to understand the aspect of their IGen values and IGen vectors associated with them.  
+
+I’m saying these things to you fairly quickly because I’m going under the assumption that this is largely – by and large review.  All right?  That you’ve seen these things in other classes and other contexts.  
+</p><p>
+So you often look for IGen vectors and IGen values of matrix A.  All right?
+
+And we are going to, likewise, talk about IGen vectors and IGen values for general linear systems, and that’s where the Fourier Transform comes in.  But just to remind you what happens here in this case, just to give you sort of the basic definition – so you say V is an IGen vector if A times V is equal to lambda times V for some V.  So V is a non-zero IGen vector – non-zero.  If there’s some non-zero vector that’s transformed into itself.
+
+So there you see – you really see the relationship with direct proportionality, all right?  For an IGen vector, the relationship is exactly direct proportionality.  A times V is just a scale version of V.  The output is directly proportional to the input.  All right?
+</p><p>
+Now it may be that any – that you have a whole family of IGen vectors that span the set of all possible inputs – that form a basis for the set of all possible inputs.
+
+If you have IGen vectors, say, V1 through VN with corresponding IGen values lambda one through lambda N that form a basis for all the inputs for all the input, all the system, all the signals that you’re gonna input into the system, then you can analyze A – the action of A easily.  All right? 
+
+That’s because, if it forms a basis for all the inputs – if V is any input – so let’s say yea.  It’s V any input – then you can write V is some combination alpha I times VI.  I equals 1N.  That’s what it’s saying – that that’s what it means to say that they form a basis for it.  And then A operating on V by linearity – I can pull that to – I can pull that A inside the sum and have it operate on the individual scaled IGen vectors.  So A of V is A of the sum is the sum of I equals one to N of A of alpha I times VI.  
+
+But again, the scaler alpha I comes out by linearity.  That’s the sum from I equals one to N of alpha I times A times VI.  But A just takes V to itself or a scaled version of itself – VI to a scaled version of itself.  So this is sum I equals one to N of alpha I times lambda I times VI.
+
+The action of A on an arbitrary input is really here.  You see you’re getting direct proportionality plus adding.  It’s very simple to understand.  Each component is stretched, and then the whole thing is scaled by whatever initially scaled the inputs.  All right?  If the inputs are scaled by alpha I, the outputs are also scaled by alpha I.  In addition, they’re scaled by how much the individual IGen vectors are stretched.  Okay?
+</p><p>
+It’s a very satisfactory picture and an extremely useful picture.  So the question is, for example, when do linear systems have a basis of IGen vectors?  When can you do this?  And that’s when these special properties come in.  All right?  That’s when these special properties come in.  So for example, and I won’t – I’m not gonna – this is sort of, again, fundamental linear algebra that I assume you’ve probably seen in some context.  
+
+But because this is so important, you gotta ask yourself when can you actually do this.  And the spectral theorem in finite dimensions for matrices says that if A is a hermission operator or symmetric operator in the real case, then it has a basis of IGen vectors, and you define a basis of IGen vectors.
+
+The spectral theorem says when you can do this.  If A is symmetric or, in the context case, hermission, then you can find a basis – actually, an orthonormal basis – even better – basis of IGen vectors.  All right?
+</p><p>
+Now if you’re thinking that this doesn’t look – that this looks sort of vaguely familiar or this is somehow – I’m using the similar sorts of words to when we talk about fourierciaries, and I talked about complex exponentials forming an orthonormal basis and so on.  It’s very similar.  All right?  It’s very similar.  And the whole idea of the Fourier Transform and diagonalizing the Fourier Transform – applying IGen vectors, IGen functions – in that case, you call them for the Fourier Transform or how they come up in Fourier series is exactly sort of what’s going on here.  Okay?
+
+These are simple ideas, right?  We – all that we started with this idea of super position – that the sum of the inputs goes to the sum of the outputs and a scale version of the input goes to a scale version of the output.  And the structure that that entails is really quite breathtaking.  It’s really quite astounding.  All right?
+
+Now, there’s one other important fact about the finite dimensional case – the case of just finding N-by-N square matrices – that’s very important.  And also, we’re going to – all these things have some analogue in the continuous case and sort of the infinite dimensional continuous case, which is where we’re gonna spend most of our time.  All right?
+
+But this you should sort of know.  This should be your touchstone for understanding the more – what happens more generally or sort of what happens in the case of N by N matrices and what happens in the finite dimensional case – what happens from what you learned in linear algebra.
+
+So one more property – it’s not that matrix multiplication is just a good example of linear systems.  All right?  This is like – it’s not just direct proportionality as an example of linear systems.  Direct proportionality is the only example of linear systems.  All right?
+</p><p>
+Well slightly more generally, it’s not that – or it’s not just that matrix multiplication is a good example – a natural example of – let’s call it finite dimensional linear systems.  All right?  So it’s like an N-by-N matrix operating on an N vector – whatever.  It’s the only example.  All right?
+
+Now you learned this in linear algebra, although you may not have learned it quite that way.  What that means is that any linear operator – I’ll say it very mathematically that’ll just give you an example – any linear operator on a finite dimensional space can be realized as matrix multiplication.
+
+And I’m gonna give you a problem to think about.  Any linear system – let me put it this way.  Any finite dimensional – so finite number of degrees of freedom – a finite number of ways of describing any input – described by a finite set of vectors – a finite set of signals, inputs.  Any finite dimensional linear system can be realized as matrix multiplication.  All right?
+
+It’s not just that it’s a good example.  It’s the only example.
+</p><p>
+Now let me just say – let me just take a little poll here.  Raise your hand if you saw this in linear algebra – saw this theorem in linear algebra.
+
+Not so widespread.  All right.  Well, you did.  If you took a linear algebra class, you probably saw this result.  All right?  Maybe not phrased quite this way, but this is sort of one of the fundamental results of linear algebra.  
+
+Now mathematicians are quick to say, “Yes, but we don’t like matrices.  We would rather stay with the linear operators, per say.  Beautiful and pristine as they are, to introduce matrices is an obscene act.”
+</p><p>
+Went out like that.  All right?  
+
+We find it useful to manipulate matrices.  We find it useful, often, to have this sort of representation.  I’ll give you one example you can try out for yourself.  
+
+So for example, some of you may have – an example you may have done – example: let me look at all polynomials of degree less than or equal to N.  All right?  That’s the space of inputs.  Inputs are polynomials of degree less than or equal to N.  So N is fixed.  All right?  So any input looks like A0 plus A1 times X as a constant term, a coefficient of X, a coefficient of X squared up to a coefficient of X to the N.  Not exact – I’ll allow myself to have some zero coefficients in here.  So I don’t go up – I don’t necessarily have to go all the way up to N, but I go up, at most, to N – to X of the N.  All right?
+</p><p>
+So any input looks like that.
+
+Now what is a familiar linear operator?  A familiar linear operator on polynomials that takes polynomials to polynomials is the derivative.  If I differentiate a polynomial, I get a polynomial of lower degree.  So take L to BDDX.  All right?  That’s the linear operator.  That’s a linear system.  All right?
+
+As such, in the space of polynomials is a finite dimensional space.  It can be finite degrees – a finite number of degrees of freedom.  The degrees of freedom are exactly described by the N plus one coefficients.  They’re N plus one because they have a constant term – order one up to order – up to degree N.  All right?
+
+So L can be described as an N by one by N by one matrix as – by an N plus one by N plus one matrix.  Find it.
+</p><p>
+Any linear operator in a finite dimensional space can be described as matrix multiplication – can be written in terms of matrix multiplication.  All right?  There’s a linear operator on a finite dimensional space.  Doesn’t look like a matrix, but it can be described as a matrix.  Find the matrix.
+
+Yeah.  Thank you.  And no – well, it can – yes, actually – yeah.  So I’ll leave it to you to think that.  That’s right.  It actually drops the degrees by one.  So you can describe it either – if you do N plus one by N plus one – let me give – I’ll give you a hint.  You’re gonna have either a row or column of zeros in there.  All right?
+
+But in general, if I’m thinking of it just sort of as a map from N plus one degree polynomials and N plus one degree polynomials, it’d be a square matrix.  All right?
+
+So I’ll let you think – I’ll let you start this out.
+
+This is a problem – actually, so let me take a poll again – a brief poll again.  Anybody do this problem in linear algebra class?  
+</p><p></p><p></p><p>
+</p><p>Yeah.  Okay.  You probably hated it then.  You may hate it now.  But – and again, it’s a sort of scattered minority response out there.  All right?
+
+But it just shows, again, that this idea that – it’s not just that it’s a good idea.  It’s the only idea.  Representing linear operators matrix – interpreting linear operator – linear system on finite dimensional space as a matrix multiplication – it’s not just a clever thing.  It’s not just a nice example.  It’s the only example.  All right?
+
+And in fact, we’re gonna see that that same statement, more or less and for our purposes, holds an infinite dimensional continuous case.  That’s what I wanna get to.  I won’t quite – I don’t think I’ll quite get there today, but I’ll get a good part of the way.  All right?
+</p><p>
+I wanna see that a similar – very similar statement – but there is an analogous statement – the infinite dimensional continuous case – very satisfactory state of affairs.  There is an analogous statement for the infinite dimensional continuous case.  All right?
+
+So let’s understand that now.  So I’ll understand that first, in terms of an example rather than a general statement, the example that generalizes matrix multiplication is integration against a kernel – or what I should say is the operation that generalizes matrix multiplication is integration against the kernel.  Something we have seen.  Something I will write down now for you.  
+
+So the operation – the linear system that generalizes matrix multiplication is the operation of integration against the kernel.  That would – that’s the phrase that you would use to describe it. 
+</p><p>
+So what it is?  What do I have in mind here?
+
+Well, again, the inputs this time are gonna be functions.  We’ll do it over here.  All right.  So the inputs are, instead of just a column vector, are going to be functions – is a function, say, V of X.  All right?
+</p><p>
+And the kernel – a fixed kernel for the operator – the things defines the operation is a function of two variables.  So the kernel is a function – let’s call it K – K for kernel – K of XY.  All right?
+
+Integration against the kernel is – the operation is L of V.  So I can – it’s gonna be producing a new function.  I’ll say that’s also a function of variable X.  There’s also a little bit of a problem here like there is in this whole subject with writing variables, but let me write it.
+
+It’s gonna go from minus infinity to infinity K of XY, V of Y, VY.  All right?
+
+K’s a function of two variables.  I integrate K of XY against V of Y, VY.  What remains is a function of X.  That by definition is the output devaluated at X.  All right?
+</p><p>
+So L of V is another function.  What is its value at X?  I integrate K of XY against V of Y, VY.  What remains in this integration is the function of X – depends on X.  Okay?
+
+That’s what I mean by integration against a kernel.  The kernel K defines the operation – defines the linear system.  So it is linear because integration is linear.  The integral of the sum of two functions is the sum of the integrals.  The integral of a scaler times the function is the scaler times the integral of the function and so on.  
+
+So that’s the first thing.  I won’t write that down, but I will say it.  So L is a linear system.  So L is linear.  All right?  
+
+Now first of all, if you sort of open your mind a little bit, you can really think of this as a sort of infinite dimensional continuous analogue of matrix multiplication.  It’s the infinite dimensional continuous analogue of matrix multiplication.  
+</p><p>
+Why?  What do I have in mind by a statement like that?
+
+Well, what I have in mind is it’s like you think of V as, somehow, an infinite continuous column vector.  All right?
+
+So it’s like you think of V as – I mean, you can even make this more precise if you actually use [inaudible] sums, but I don’t wanna do that.  I don’t wanna write the – well, let me just write it out like this – as an infinite column vector.  All right?
+</p><p>
+And think of this operation integral from minus infinity to infinity K of XY, V of Y, VY – what’s going on here?  
+
+So this is like a column vector.  K of XY is like a matrix – a doubly infinite continuous matrix.  X is the index of the row.  V is the index of the column.  You are, like, summing across the columns of the matrix time – summing across a row of a matrix – that’s integrating with respect to Y – times the corresponding column entry V of Y.  So this is like a column index.  This is like a row index.  And an interval, of course, is like a sum.  Okay?
+
+This is exactly what’s going on.  Exactly what’s going on.
+</p><p>
+K of XY – you’re summing across the X row, right?  XYYYYYYYY times VY VYYYYYYYY and you’re adding them all up according to the integral, and you’re getting the component – the X component of V.  All right?
+
+Now see, analogue – now what else is true?  Or what else is true?  If it’s such a good analogue, are there analogues to the other statements that went along with the finite dimensional case?
+
+Well again, just as in the finite dimensional case, there are special linear systems that are characterized by special properties of the matrix.  So too, in the sense of [inaudible] continuous case, there are special properties of the systems that are characterized by special properties of the kernel.  All right?
+
+And although I’m not gonna use them now, I at least wanna mention them because I wanna continue this sort of analogy between the finite dimensional discreet case and the infinite dimensional continuous case.  
+</p><p>
+So special linear systems arise by extra assumptions on the kernel – on K of XY.  All right?
+
+So for example, you might assume – now what do you think is the analogue to the symmetric case?  For a matrix, it’s that the transpose of the matrix is equal to the matrix.  So what do you suppose the transpose of – or the analogue of the transpose is for a kernel K of XY?  What should the condition be?  What should the symmetry condition be?
+</p><p>
+Yes.  Be bold.  I’ll help you.  I won’t help you.
+
+All right.  What should a symmetry condition be that’s sort of analogous to a matrix being equal to its transpose?  If K of XY is the analogue of the matrix where X is the row and Y is the column, how do you get the matrix?  You interchange the column and the row.
+
+</p><p><b>Student:</b>[Inaudible].
+
+</p><p><b>Instructor (Brad Osgood)</b>:Pardon me?
+
+</p><p><b>Student:</b>Time invariance?
+
+</p><p><b>Instructor (Brad Osgood)</b>:No, not time invariance.  We’ll get to that.
+
+</p><p><b>Student:</b>[Inaudible].
+
+</p><p><b>Instructor (Brad Osgood)</b>:Right.  I think I heard it there.  All right.
+
+</p><p>Symmetry – or self-adjointess – is the property K of XY is equal to K of YX.  If the kernel satisfies this property, you say it’s a symmetric system – symmetric or sometimes you call it a self-adjoint linear system.  They have special properties.  I’m not gonna talk about the properties now, but again, I’m just pursuing the analogy between the discreet case and the continuous case.  All right?
+
+Or – and what’s hermission symmetry?  Hermission symmetry, in the case of a complex kernel – and I won’t allow the case of a complex kernel – would be K of XY would be K of YX bar.  Okay?  Complex conjugate.
+
+This is all [inaudible] and so on and so on, and I won’t gulf into that very much now.  
+
+Now we have seen many examples of linear systems that are given by the integration against a kernel.  What is an example of – what is a fundamental example in this class of a linear system that is given by integration against a kernel?
+
+A Fourier Transform.  Good.  So for example, a Fourier Transform – FF of S – is the integral from minus infinity to infinity E to the minus two pi IST, F of T, DT is exactly integration against a kernel.  What is the kernel?
+
+The kernel is K of ST is a minus two pi IST.  All right?  It fits into that category.  It has special properties – many special properties.  That’s why we have a course on it.  Okay?
+
+But nonetheless, it fits under the general category of a linear system.  And actually, you can check that K of ST is equal to K of TS is actually symmetric.  All right?  If I switch S and T, the kernel doesn’t change.  So it’s a symmetric linear system and so on.
+
+What is another example of an important linear system that can be described by a – by integration against a kernel?  What’s another example that we have studied extensively and use everyday almost – on good days?
+
+</p><p><b>Student:</b>[Inaudible].
+
+</p><p><b>Instructor (Brad Osgood)</b>:Convolution.  All right?  All right?  Fix a function H, all right?  Then if I define L of V to be H convolved with V, that is a linear system.  That’s a linear system.  Convolution is linear, but what is that in terms of the operator?
+
+L of V of X is the integral from minus infinity to infinity H of X minus Y, V of Y, DY.  All right?
+
+Convolution is a linear system that falls under the general category integration against the kernel.  It’s special one, actually, and it’s what – as it turns out, it’s a very important special case because the kernel here doesn’t depend on X and Y separately.  It depends only on their difference.  All right?  
+
+So note for convolution – all right.  For convolution – that is, for a linear system given by convolution, the kernel depends on X minus Y.  [Inaudible] is a function only of one variable or the difference between the two variables X minus Y instead of X and Y separately – and not X and Y separately.  All right?
+
+Now for reasons which you’ve probably seen, actually, and which we’ll talk a little bit more about detail – this particular special case leads this – and this property leads to a so-called shift invariance or time invariance.  All right?
+</p><p>
+So in particular, if we shift X and Y by the same amount – A, say – some number A – A.  So X goes go X plus A or X minus A if I delay it by A.  Y goes to Y minus A.  And then, of course, X minus Y is equal to X minus – goes to X minus A minus Y minus A is X minus Y.  It’s – the difference is unchanged.  All right?
+
+So the convolution is unchanged.  If I shift X and Y.  All right?
+
+And this leads to – I’m not – I don’t wanna say too much more about it than that, but this is what leads to the so-called shift invariance or time invariance of convolution.  This leads to convolution.  That is this observation leads to the phrase you hear – and we’ll talk about this – convolution as a linear shift invariant or time invariant.  People usually say time invariant, but it’s really better to say shift invariant somehow.  It’s more descriptive – linear time invariant system.  All right?  But we’ll get back to that.
+
+The fact is that, again, convolution is, of the form, integration against the kernel, but it’s a special kernel because it depends only on the difference of the variables, not on their – not on the variables separately.  Okay?
+</p><p>
+In general, integration against the kernel is integration against the function of two variables.
+
+Now it’s not just that this is a good idea.  It’s not just that this is a good example of linear systems.  I’m not talking about convolution here.  I’m talking about generally integrating against a kernel.  All right?
+
+So the words that I said, like, ten minutes ago, I’m gonna say again.  But in this different context.  
+
+So it’s not just that integration against the kernel is a good example of linear systems – in this case, continuous linear systems – infinite dimensional linear systems – just like it’s not just that matrix multiplication is a good example of finite dimensional linear systems.  It’s the only example.  Okay?  It’s the only example.  Any linear system – now this is statement has to be qualified because there are assumptions you have to make and so on, but that’s not the point.  The point is that any linear system can be realized somehow as integration against the kernel.  
+
+Yeah.
+
+</p><p><b>Student:</b>[Inaudible] manifest in a matrix operator?
+
+</p><p><b>Instructor (Brad Osgood)</b>:Oh, that’s a good question, and we’ll come back to that, actually.  It’s in the notes.  
+
+The matrix has had special properties
+
+</p><p><b>Student:</b>[Inaudible].
+
+</p><p><b>Instructor (Brad Osgood)</b>:Circulant, actually.  It’s a little bit more than Tarpowitz.  Yeah.  RTFN, man.  It’s in the notes.  Okay?  We’ll come back to that.
+
+</p><p>All right.  For now, don’t spoil my drama.  All right?
+
+</p><p>Again, it’s not just that matrix – in the finite dimensional case, it’s not just that matrix multiplication is a good example.  It’s the only example.  In the infinite dimensional – the continuous case, it’s not just that integration to kernel – against the kernel is a good example.  It’s the only example.  All right?
+
+</p><p>Any linear system can be realized as integration against the kernel.  All right?
+
+</p><p>Now on that fantastically provocative statement, I think we will finish for today.  And I will show you why this works next time.
+</p><p>
+[End of Audio]
+</p><p>
+Duration: 51 minutes 
+</p><p>
+
+</html>

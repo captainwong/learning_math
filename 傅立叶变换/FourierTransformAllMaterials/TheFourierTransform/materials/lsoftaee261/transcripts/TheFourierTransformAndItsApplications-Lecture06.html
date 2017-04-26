@@ -1,0 +1,278 @@
+<html>
+TheFourierTransformAndItsApplications-Lecture06
+<p>
+</p><p><b>Instructor (Brad Osgood)</b>:Okay, we’re on.  
+
+</p><p>First thing I want to say is that I made a little mistake last time in lecture.  It was gently pointed out to me.  When I was talking about the heat equation; the floorshow was fine, the discussion was fine, but then I said this thing about as T tens to infinity, the temperature tens to zero.  That wasn’t right.  I forgot about the zero – because somebody said look, the fusion man, you don’t lose anything, it just diffuses.  So it’s not right to say the temperature changes to zero, I was thinking of while it was escaping to the universe or something like that. 
+
+</p><p>But in fact, what happens is that as time tens to infinity – I forgot – technically, mathematically, I forgot about the zero free coefficient, which is in the solution, so what happens is that as the tens to infinity, the temperature tens to the average temperature of the equated natial distribution of the initial distribution.  So I’m going to write that up and post that on the website because I cannot stand the idea that this error is left unfixed.  I meant to post that already, I just hadn’t had a chance to do that, but I wanted to make sure that I made that formal apology and announcement.  All right?
+
+</p><p>Any questions?  Anything on anyone’s mind?  Other than that, any other corrections?
+
+</p><p>That’s a relief.  All right. 
+
+</p><p>All right, so today – do you have your hand up or are you just sort of resting?  Oh, no, okay.  
+
+</p><p>Last time, we had gotten right to the verge of discovering the Fourier transform as a limited case of Fourier series and I just wanted to pick up where we left off and finish that off and then launch into a more formal treatment of Fourier transforms and talk about how we’re going to proceed.
+
+</p><p>So we are about to get the Fourier transform as a limiting case of – we’ll actually there’s two aspects to it.  There’s a limiting case of the Fourier coefficient and the Fourier series; the analysis part and the synthesis part of the Fourier coefficient and Fourier series.  
+
+</p><p>So when I talk about the Fourier transform, I’m sort of thinking of the two things together, but there’s really two parts to it and they both come out of more or less the same analysis.
+
+</p><p>If I solely remind you what the set up was and who and why and what I mean by a limiting case, by I mean a non-periodic phenomena I want to model as a periodic phenomena as the period tens to infinity.  All right? 
+
+</p><p>And I took a special case of this, or just a case for illustration, that is, I suppose I have some function which dies off eventually so it’s zero outside some interval, now that’s – ultimately we’re gonna drop that restriction, I’m just taking this as a case to sort of model what the situation should look like.  
+
+So I’m going to take the case and, again, this was a set up from last time.  So take a case that looks like this.  Have some function as F of T, which is zero outside some interval.  I’m drawing it like it’s positive but it can be very general, but the fact is that it dies off at some point, and then I periodize it so – you can image it’s a very big interval to begin with – but finite.  And the I periodize it – I take an even bigger number – Capital T, and I look at it from say minus T over T to 2 over T, that’s supposed to represent one complete period, and then periodize this function.  So the pattern repeats.  All right?
+
+</p><p>So periodize to make periodic of period T.  So think of T as big, and eventually we think of T as going off to infinity.  So I won’t draw the picture, but again, the idea is I just take the same pattern and repeat it over and over again.  
+
+</p><p>All right then, you can write down the formula for the Fourier coefficient and you can write down the formula for the Fourier series.  So what the series looks like – the Fourier coefficient looks like this:  CK is 1 over T times the interval from minus T over 2 – instead in integrating from 0 over T, I integrate over any period, so I take the period from minus T over 2 to T over 2 and then the formulate is either the minus 2 PI I K over T, T, that’s how I wrote it last time, FOTDT and the Fourier series, that’s the analysis part, has decomposing F into its components and the complex – the corresponding complex exponentials are these.  
+
+</p><p>And then the Fourier series is to recover the function from its components as a sum from minus infinity to infinity, C sub K of each of the 2 PI I, K over T, times T.  All right?
+
+</p><p>And what you would like it you would want to take a simple-minded approach of saying a Fourier transform inverse Fourier transform and so on, is a limited case of Fourier series as you let the period ten to infinity you just let T ten to infinity but that doesn’t quite work.
+
+</p><p>All right, so you would like to just let T ten to infinity and low and behold, the formula has emerged, but it doesn’t work.  Doesn’t quite work.  All right?
+
+</p><p>So instead, it doesn’t work because you don’t get anything.  That is to say the Fourier coefficient tens to 0.  Doesn’t work because if TK tens to 0 as T tens to infinity.  
+
+</p><p>All right, so what you do is a little clues job here, it tens to 0 like 1 over T, that’s what I talked about last time and I won’t repeat that argument.  Because of that factor 1 over T in front, this interval is bounded if the function is fixed and again, if the function is 0, non 0 only in the interval from A to B, that’s ultimately not getting very big, so it goes to zero like 1 over T so you scale up by T.  All right?
+
+</p><p>Scale up by T.  And what I mean is, I want to consider instead of T over 1 times the interval, I just want to consider the interval and I want to view that as a – to anticipate what’s going to happen   as a transform version of the function, not evaluated at K, although the indexing here is on K, really it’s K over T that’s the important thing, all right.  Again, I want to let T ten to infinity so I want to emphasis that connection.  
+
+</p><p>So I want to look at   let me just use this notation, let me say write – F of F, add K over T, all right, so that’s a new notation.  That’s something I’m introducing to indicate this sort of scaled interval as the interval from minus T over T over 2, E to the minus 2 PI I, K over T, on to T, F of T, DT.  
+
+And the Fourier series here has to incorporate that 1 over T again because that does come into the coefficient so the Fourier series looks like, F of T is the sum from – I’ll write it like this – K goes minus infinity to infinity, this transformed this coefficient K over T times the complex exponential E to the 2 PI I, K over T, times T times this factor 1 over T.  This factor 1 over T is coming in there again because that occurs in the definition of the Fourier coefficient that I have to have that in there.  I mean, the Fourier series is in terms of the Fourier coefficient and the 1 over T is in there.  Okay?
+
+</p><p>Now I want to let T ten to infinity.  This is all heuristic, all right?  This is not a proof, it’s an argument for what the formula otta look like as a limiting case of the Fourier series, of the periodic case.
+
+</p><p>All right so now, let T ten to infinity, and you have to make an argument as to what the formula should look like.  
+
+</p><p>All right I said this last time; I want to say it again.  The idea is that as T tens to infinity these numbers, K over T, of course for a fixed K, that’s tenning to 0, but the idea is that K is also going from minus infinity to infinity and what’s happening here is that, if you think of K over T as a discrete variable, it is getting – it is approaching a continuous variable.  All right?
+
+</p><p>The space keeps getting closer and closer together.  They’re spaced 1 over capital T apart.  One over T, 2 over T, 3 over T, 4 over T and as T is tenning to infinity, they are spaced closer and closer together so the discrete variable is approaching for all to see, a continuous variable which I’ll due note by S.  All right?
+
+</p><p>So the discrete variable   that’s not a technical term all right.  I’m just reasoning and futuristically here – tens to or placed by, in the limit, a continuous variable S.  And S is going to range from minus infinity to infinity.  All right? 
+
+</p><p>Fine.  That is to say, this formula, in the limit as T tens to infinity is going to be replaced by another formula.
+
+</p><p>So you write, FO, F of S, as the interval from minus infinity to infinity, E of the minus 2 PI I S T, so K over T again is being replaced by the continuous variable S, F of T, D T.  
+
+</p><p>But don’t stop there, also looks what happens to the Fourier series as capital T tens to infinity and for the Fourier series, which is here, you have to recognize this as a discrete – as a sum approximating interval.  All right?  This is a function of evaluated at the variables K over T, K over T here and as T tenning to infinity these are being – there are pushing a continuous variable.  The 1 over T here is like the Delta S, you know that comes in riding an approximating sum into an interval.  
+
+</p><p>So as T tens to infinity, what happens to the Fourier series, it is replaced by an integral.  Replaced by the integral from my – replaced by this formula; replaced by F of T, use the interval for minus infinity to infinity, E to the plus, 2 PI I over – I’ll write it like this, I’ll keep the same order of the terms – the Fourier transform of F, or the – this thing which I’m going to now call the Fourier transform, in just a second – F of – this, the Fourier transform of at S, either the 2 PI I S T D S.  Okay?
+
+</p><p>Now, I really feel like the clouds otta open up at this point because something really, very momentous has happened here, if only by analogy.  All right, if only by a heuristic argument saying you want to view a non-periodic phenomena as a limiting case of a periodic phenomena, this is one way of doing that, that leads to something that I’m going to spend the rest of the quarter convincing you is a good thing.
+
+</p><p>All right let me say a little bit more here, again this – this little journey here – has been a way of making the transition from a case that we studied to a case that we haven’t studied.  The final step in the process is to declare victory, that is to say, and this is what happens in mathematics all the time and this is what makes it very frustrating for people when they’re reading a mathematics book to try to figure out what the hell is going on and where the hell do these formulas come from and so on and so on. 
+
+</p><p>You sort of erase all paths of discovery and you just declare – what do you know, I’m going to give the following definition – how about that?  And that’s exactly what happens, so that’s what we do now.  We sort of declare victory. 
+
+</p><p>I wanted to – I didn’t want you to miss the steps in between.  There they are   let me write it over here, I’m making our victory blackboard over here.  I didn’t want you to miss the steps in between because I actually view a very important part of this course is not just going over formulas and facts, but in trying to give you a certain feeling for how the mathematics develops in the context of these problems.  All right because, if you sort of get used to thinking that way, it will give you a much greater power over the problems that you’re likely to confront out there where you really have to apply mathematics using your own head, using your own thoughts.
+
+</p><p>All right so what I’m describing to you is just the sort of process that you got through that ultimately results in a definition.  All right, it ultimately results in the definition but the steps along the way are often hidden and I wanted not to hide them.
+
+</p><p>All right, so we define – at this point I usually say, the clear victory – so if F of T is a function defined on a whole real line, from minus infinity less than T less than infinity, you define its Fourier transform by the formula that I just wrote down.  
+
+</p><p>The Fourier transform at S is this interval – minus infinity to infinity, E to the minus 2 PI I S T , F of T, D T.  All right? 
+
+</p><p>So here, S also is a real variable going from minus infinity to infinity but the Fourier transform itself is complex value because I’m integrating a function against a complex exponential here.
+
+</p><p>I didn’t say whether or not F had to be real or complex, as a matter of fact, in general, I don’t want to make that a – I want to allow either case.  All right?  So F can be complex in many application because of course, F is a real signal and that’s fine, but it makes sense, as far as the definition goes, to allow F to be either real or complex.  I won’t say anything more about that.
+
+</p><p>Now there’s a lot – of course, there’s a lot more to say about the definition.  One thing that should be stated right up front and something I’ll say more details about later is, of course, this definition is only good if the interval makes sense.  All right?  
+
+</p><p>To write down this interval, saying this is the Fourier transform, but you, if you’re going to actually carry out this innovation for a particular value of S, you know, you have to say something about when the interval converges.  All right?
+
+</p><p>So you need to say something.  We’ll need to understand the conversions of the interval.  
+
+</p><p>Just like we needed to understand the conversions of the Fourier series, at least to a certain extent we also need to understand the convergence of the interval that defines the Fourier transform.
+
+</p><p>All right, and that’s an issues, right? 
+
+</p><p>But not only have we been led to the Fourier transform, we have also been led to the Fourier inversion.  This is analysis – all right.  The Fourier transform analyses the Fourier signal, the non-periodic signal into its component parts.  What are the component parts?  The component parts are a continuous family of exponentials.  Not a discrete family of complex exponentials but a continuous family of exponentials that equal the 2 PI I S T.  All right?
+
+</p><p>The Fourier transform analyses F of T into its constituent parts.  
+
+</p><p>But now we also have Fourier inversion.  Fourier inversion says that we can synthesize the function from its constituent parts.  And that’s the second formula there.  That says that if you know the Fourier transform then you can get back the function.  That is, you have F of T, the signal equals the interval from minus infinity to infinity of – let me write it like this – either the 2 PI I S T, the Fourier transform at S, D S.  
+
+</p><p>You often think of T as the time variable and you think of S as the frequency variable and you think of the function defining the time domain and the Fourier transform defining the frequency domain.
+
+</p><p>You can think about it that way but you don’t always think about it that way, and I’ll come back to that as well. 
+
+</p><p>All right, so you think of generally F of T in the time domain, the Fourier transform of S in the frequency domain   that is to say you think of T as a time variable, you think of S as the frequency variable   that’s fine but don’t be weighted to that so completely that you’re not willing to change your prospective.
+
+</p><p>All right, the Fourier transform is a very flexible tool, it comes up in a lot of different contexts, T is not always time, S is not always frequency and you do yourself no favor if you force yourself into thinking only in those terms.  All right?  It’s good for many applications but not for all applications. 
+
+</p><p>You will hear me say a lot, you will hear me rant, you know, about notation and sort of convention and things like that because this subject is fraught with difficulties as far as notation goes, as far as interpretation goes.  Part of that is just because the richness of it.  All right, it’s a very rich subject and any rich subject can be abused in various ways, all right.  And this is – I would say not only no exception to that, maybe a real exemplar of the abuse that can be heaved onto different symbols and their interpretation.
+
+</p><p>Okay now, I could summarize what I just said actually into what I consider a major secret of the universe.  Perhaps the most major secret of the universe that you will ever lean in your lives, certainly in this class, is that every signal has a spectrum – you call S, the frequency domain or you call the value of the Fourier transform the spectrum.  All right?  And it’s a term I’m sure you’re familiar with.  
+
+</p><p>So if I can summarize this, as [inaudible] major secret of the universe; probably soon to appear on YouTube all around the world.  Is that every signal has a spectrum and the spectrum determines the signal.  
+
+</p><p>All right, to say that every signal   like all secrets of the universe, this is the paint of a little too broad of brush.  All right?  To say that every signal has a spectrum is, you can take Fourier transform, but of course, there are issues there.  Does the interval really converge and so on.  All right, to say the spectrum determines the signal means that you can always invert it like this, it means in particular that this interval always exists.  All right, and that’s – there are also issues associated with that.  But never mind that.  Let’s just concentrate on the majesty and really, the enormous applicability and truth of this statement, all right?  
+
+For most cases, and for the cases that you’re certainly interested in, this or some version of this is true and can be a guide to happiness.  Okay?
+
+</p><p>The Fourier transform, the analysis and syntheses of a function are two ways of seeing the same thing.  You can look at the function in the frequency domain, you can look at it in terms of its Fourier transform or you can look at it in the time domain.  You can recover it from its spectrum.  
+
+</p><p>All right, the two different representation of the same thing and if you have two different representations of the same thing, you have tremendous power over it.  All right?  They’re equivalent.  Knowledge of one is equivalent to knowledge of the other.
+
+</p><p>You will not get anything more profound, I think in any class, anywhere, anything.  How about that?  That’s a way to start the weekend off. 
+
+</p><p>All right now, let me introduce one other bit of notation now so I’ll have a chance to use it although I’m not going to make much more use of it today, but we’ll certainly make some use of it later, and that has to do with this sort of inversion formula here. 
+
+</p><p>That is, it pays to introduce a separate operator along with the Fourier transform, namely the inverse Fourier transform, which is defined in a very similar way except for a change of sign.  So it’s useful – so again, the Fourier transform F at S is equal to the interval for minus infinity to infinity of either the minus 2 PI I S T, F of T, D T, all right.  That’s sometimes called the forward Fourier transform.  Again, I won’t take up your time.
+
+</p><p>It’s also useful to introduce the so-called inverse Fourier transform and let me call the function G.  As the interval from minus infinity to infinity of either the plus 2 PI I S T, say G of S D S.  All right, now be careful about how the variable – then this result, the fact that you can recover a function from its Fourier transform asserts that this really is the inverse operator of this.
+
+</p><p>All right, so Fourier inversions says – Fourier inversion says that the inverse Fourier transform for the Fourier transform of a function is the function.  And it also says, for that matter, if I take the Fourier transform of the inverse Fourier transform of a function, I get back the function.  Okay?
+
+</p><p>Now again, I don’t want to get too far on a rant now, but, just to start, or just to give you a little warning of the things to come.  You have to careful how you look at his, all right; the role of the variables here.  This – take a look at the definition of the Fourier transform, all right, you’re integrating either the 2 PI S T that depends both on S N T against the function of T, you’re integrating with respect to T, what remains as a function of S.  Right?  That’s why I call – use the notation, the Fourier transform of F at S.  So it’s an operation taking the Fourier transform evaluated at the point S.
+
+</p><p>All right, the operation is carrying out this integration but in order to write that down, you have to evaluate it at a point.  So you’re evaluating at a point S, it’s given by this formula.  
+
+</p><p>Likewise, for the inverse Fourier transform, I’m integrating either the 2 PI I S T, that’s a function of two variables, S and T.  If I integrate against the function of S, what remains is a function of T.  It’s inverse Fourier operation, to carry out the operation I have to evaluate it at a point and the variable to use here is T because I’m integrating with a function of S and T against the function of S integrating with respect to S.  All right? 
+
+</p><p>So note two values here actually.  
+
+</p><p>All right notice, that the Fourier transform at 0, it is the operation of taking the Fourier transform and then as the operation starts [inaudible] of evaluating at a point, so the Fourier transform of F at 0 is the interval for minus infinity to infinity, E to the minus 2 PI I 0 times T, F of T, D T.  I plug in S equals 0 into the formula.
+
+</p><p>And so that’s just the interval from F E average value of the function, or at least what you consider the average value of the function, F of T D T.  There’s no – you don’t divide by the length of the interval because the interval’s infinite.  All right, but it’s the interval of the functions of the area under the curve if you want to think of it that way.  All right?
+
+</p><p>So the 0 Fourier, the value of the Fourier transform of 0 is the interval of the function.  This is analogous to the 0 Fourier coefficient being the average value of the function.  The interval over one period.  Here, I don’t have a period.  
+
+</p><p>And likewise, by the same token, the inverse Fourier transform of a function at 0, G at 0, is the interval for minus infinity to infinity.  I integrate the Fourier transform times E to the 0 – I’m not writing at this time, I’m just giving you a final answer – so the interval for minus infinity to infinity of the Fourier transform, that gives you the inverse Fourier transform at the origin.  Okay?
+
+</p><p>You have to always tell yourself, and be clear, what the role of the variables are in these expressions.  Trust me, it becomes an issues.  When the formulas get a little bit more complicated, as they will, how the variables are used and keeping that straight is something that you have to be careful about.  Something you have to be careful about.  
+
+</p><p>Okay now, so we’ve gotten to the stars of the show.  The Fourier transform, the inverse Fourier transform, and the idea of Fourier inversion.  It is now the – my responsibility for the rest of the quarter to convince you that this was worth it.  All right? 
+
+</p><p>That is, that these really are useful operations to consider and that they can tell you much that is worthwhile in, certainly in applications.  But not just in application, the Sirline applications.
+
+</p><p>I want to tell you how we’re going to proceed.  Actually, we’re going to proceed to develop the ideas here in a way very much like, in a path, very much like the one you followed when you were first learning calculus.  All right?  
+
+You cast your mind back those happy days, when the world was new; calculus was just an attraction on the horizon.  When you’re learning calculus, the path you follow – we learned about derivatives and intervals, all right; two basic operations of calculus.  And the way you did it was you learned general – you learned specific formulas like derivatives of exponentials, derivatives of polynomial derivative functions.  You used intervals of corresponding intervals and then you learned general properties.  You learned how to differentiate, you learned the product rule, the chain rule, integration by parts, you learned specific formulas that are going to come up, often enough that you want to know how to differentiate a specific function.
+
+</p><p>But functions come up in combinations, products, quotions, compositions, so you had to learn, also, general rules for taking derivatives.  You had to learn the product rule, the chain rule and so on. 
+
+</p><p>And then, of course, you learned the applications of derivatives and intervals.  All right?  
+
+</p><p>Now also in connection with the Fourier transform, let me call your attention to a fact, to a problem or a challenge you face in calculus.  The interval’s a very rich operation.  I’ll come back this and I’ll say this again later, but when you first learn about the interval you learn the certain interpretation of the interval.  You learn that usually, as some sort of motivating [inaudible], the interval’s the area under the curve, or you recover the total change in the function from its rate of change or so on. 
+
+</p><p>But the interval is a very rich concept and you do yourself no favor by clinging to one particular interpretation of the interval in all case because maybe that interpretation won’t really be a guide, or won’t really apply. 
+
+</p><p>Well again, as I was just saying a minute ago, that’s the similar sort of thing with the Fourier transform and the inverse Fourier transform.  It has certain interpretations that the variables often have certain interpretations, time or frequency.  But you do yourself no favor if you cling to those particular interpretations and try to impose them where they don’t necessarily belong. 
+
+</p><p>However, we’re going to follow a similar path to the one – in or however, but – analogously we’re going to follow a similar sort of path when we develop properties of the Fourier transform.  
+
+</p><p>That is, we’re going to need to develop specific transforms.  Transforms of specific signals.  The kind of signals society needs.  Right?  That society runs on. 
+
+</p><p>And then we’re going to develop general properties of the Fourier transform.  That is, what to do when signals are combined in certain ways.  Actually in the way they’re combined is a richer – in many cases – the richer operation, the richer set of operations than the ordinary functions of – that you work with in calculus, the ordinary rules of calculus. 
+
+</p><p>Then, of course, we’re going to talk about a lot of applications of these ideas.  It’s very similar in the pass somehow, to the way that you study calculus.  And I say that again; because I hope it give you a way to sort of organizing your own study oven.  I realize, at each stage, here I’m learning a specific formula; here I’m learning a general formula, and so on.  It will help – and here I’m learning application, and this is the interpretation in this case and this is the interpretation in that case.  It will help you, I hope, sort of organize it in your head, how the subject is evolving.  Okay?
+
+</p><p>All right, so let’s look at a few – let’s start on that path and let’s look at a few examples. 
+
+</p><p>Basic examples; that is calculations with a Fourier transform.  Now, I’m only going to do a few of these because unlike calculus – when you first learned calculus, you’re teacher, I hope, you know, showed you how to do a lot of calculations in a lot of specific cases because all was new.  All right, I’m not going to do that now.  I’m going to do a few specific calculations to show you the kind of techniques that always come in, or often come in, but you can read the derivations, you can do the derivations, there’s no new techniques involved there.  All right, the only techniques are integration, either integration by substitution or integration by parts, direct integration, whatever.
+
+</p><p>That’s not new, what’s new are the specific formulas that come up and that’s something, again, that I am going to leave to you to read, derive, learn, memorize, whatever.  All right?  
+
+</p><p>I want to spend a little bit more time on developing some of the general properties because there, there are some new things.  There are some interesting things that you haven’t seen before, or haven’t seen other than in this context. 
+
+</p><p>So the first example I want to take is the very simplest one, one we’ve seen – you’ve seen actually in harder problems, we saw actually in the context of the Fourier series – that’s the function that models a signal that’s on again and off again.  Or in this case, since I’m not looking at the periodic version, it’s just either on or off.  And that is the so called rectangle function.  PI of X, this is a notation I’m going to use and I think of it as advocated by Bracewell, it’s not bad.  I’ll explain – actually I’ll call it variable T, why not.  
+
+</p><p>I’ll tell you Y uses the notations to the second.  It is 1 if absolute value of T is less than 1 and it is 0 if absolute value of T is greater or equal to 1.
+
+</p><p>So it’s graph, as defined for all values of T – and here’s 0 – excuse me, here’s minus 1 and here’s the 1.  So, it’s actually – yeah?
+
+</p><p>[Inaudible] careful here, no, see I already got it wrong because there’s not universal convention here.  I’m sorry.  I want it to be of Width 1, not Width 2.  So I’m going take ½, ½, see, I already messed it up.  Damn.  
+
+</p><p>Okay, it has total width 1, so it goes from minus to ½ to plus to ½.  It takes a jump and it is discontinuous at the end points.  All right?  So it’s 0 in between the end points and from ½ and minus ½   excuse me, it’s 1 between the end points and it’s 0 outside the endpoints. 
+
+</p><p>Now, this is not – and it’s called PI because PI looks like a rectangle.  I think it’s stupid, and I feel really, I feel so juvenile saying that, but – and it’s also sometimes called the top-hat function because it’s supposed to look like a top hat.  As it goes up, up, up, it looks like a rectangle.  So it’s also called, more grandly, sometimes its call the characteristic function of the interval from minus ½ to ½.  It is sometimes call the indicator function of the interval from minus ½ to ½.  All these terminologies are in day-to-day use.  All right, depending on the field.
+
+</p><p>I would actually tend to call it – in mathematics you tend to call it the characteristic function so I always tend to call it the characteristic function but I won’t do that anymore, I’m going to call it the rectangle function.
+
+</p><p>And there’s also a certain amount of debate about how to define it at the endpoints.  All right, I define it a certain way at the end points.  Other people would define it differently.  Other people would have it to be 1 at the end points.  Some people would have it have Value ½ at the end points.  Because of this idea somehow at a discontinuity you have to look at the average value.  This becomes a religious issue with some people.  How this function should be defined at the end points.  I do not want to get dragged into it.  It will never make any difference for anything we ever do.  All right, so this is my definition.  If you don’t like it, go to hell.
+
+</p><p>All right, so what is the Fourier transform?  The only recourse we have in calculating Fourier transform is the definition.  All right, there’s nothing else to work with.  So, you have to carry out the integration.  One has to carry out the integration, I should say.  So what does one do?  One writes the definition down.  The integral for minus infinity and infinity, E to the minus 2 PI I S T, PI of S, D, PI of T, D T.  Careful about which variable we’re using here.  I’m sorry, I’ve already got myself a little crowded.  
+
+</p><p>The interval once again, the interval for minus infinity to infinity, E to the minus 2 PI I S T , PI of T, D T.  Okay? 
+
+</p><p>All right now, PI T is only non 0 from minus ½ to ½.  So the only thing that remains here in the interval, it’s not a infinite interval, it becomes a finite interval because the function is 0 outside that interval so it’s the interval from minus ½ to ½ E to the minus 2 PI I S T D T.  You integrate that like you integrate any exponential, the fact they’re complex number is in there does not matter.  The carrying out the integration is the same as ordinary integration in calculus.  
+
+</p><p>So that is minus 1 over 2 PI I S, you’re integrating with respect to T.  So you’re regarding S, which essentially is a constant as far as the integration is concerned.  So it’s minus 1 over 2 PI I S, either the minus 2 PI I S T, evaluated between T equals minus ½ and T equals plus a ½.  All right, that’s the only thing you can do.  You have to – you have no recourse here other than to use the definition.  Let’s do it, quickly. 
+
+</p><p>So that is – what do I get?  I get, at the top end point, I get minus 1 over 2 PI I S, E to the minus 2 PI I S times ½ minus, minus 1 over 2 PI I S.  The only thing you can get wrong here is, you know, like minus signs and things like that.  All those problems you used to have problems keeping straight in calculus, well, I’m sorry, they haven’t gone away.  The same sort of issues are there. 
+
+</p><p>Minus 1 over 2 PI S E to the minus 2 PI I S minus ½, so that’s minus 1 over 2 PI I S, E to the minus PI I S, minus a minus gives me a plus, 1 over 2 PI I S, E to the minus minus because we plus, PI I S.  Or if you’ll allow me to write that differently, that is 1 over PI S, 1 over 2 I, well I guess, either PI I S minus either the minus PI S divided by 2 I.  
+
+</p><p>And I write it like that because you have to start to recognize how to manipulate these complex exponentials to bring in, when called for, the ordinary true functions, signs and cosigns.  And the PI I S minus the minus PI I S over 2 I is the sign of PI S.  This is the sign of PI I S divided by PI S and that’s the formula for the Fourier transform, period.  Okay?
+
+</p><p>This is the most basic example and actually, as simple as it is, it’s actually one of the most important examples.  It’s one of the ones that comes up most often in applications.  So write it down.  
+
+</p><p>The Fourier transform of PI, direct single function is the sign of PI S divided by PI S and this function comes up so often in applications it is given a special name, it is called the sync function.  So by definition, the sync function of S is sign of PI S divided by PI S.
+
+</p><p>Now that’s a function actually, I’m sure any electrical engineer has seen this function, every electrical engineer, in fact, sees this function in their dreams.
+
+</p><p>You also saw this function in calculus   let me do it over here   because it’s an example of sign of X over X; a famous limit.  You know, what happens if X tens to 0.  The limit of sign of X over X is X tens to 0 is 1 and the limit is S tens to 0 of sign of PI S over PI S is 1, so this function is actually quite nice.  This function is continuous and even smooth and the graph looks something like this.  It dies off; it dies off like 1 over S.  It’s symmetric, it’s an even function.  That’s a damn good sync function if I do say so myself.
+
+</p><p>So here’s 0, 1, 2, 3, it has zeros at the integers.  Minus 1, well, that’s not so good I guess, actually.  It’s supposed to be even.  Minus 1, minus 2 and so on.  Okay?
+
+</p><p>Now, you can look in the book.  I have a picture of the sync function, I have many pictures of the sync function, but don’t deny yourself the pleasure of going down to Sunnydale, driving down to Sunnydale, going to the Fry’s in Sunnydale, Fry’s I’m sure some of you are new to the area and may not know is this huge electronic store and the Fry’s in Sunnydale has an enormous neon sync function.  All right, in living color.  It’s incredible.  You go into that store and you see sync functions everywhere.  Right, they’re on all the railings, they’re on the turn styles, I mean, it’s a nightmare.  All right, so – and there is a picture – I saw it and I couldn’t believe it – there is a picture of it in the book.  All right?  
+
+</p><p>Every electrical engineer knows this function.  Mathematicians think sign of X over X, what is the big deal you know, but in fact, a large part of the world’s economy depends on this stupid function.
+
+</p><p>So go down to Fry’s, see it live.  I would like to imagine the whole class standing there looking at it.  You know, one Saturday afternoon and having the people from the store go out saying, can I help you, customer service, you know.  What can I do, are you here to return something?
+
+</p><p>All right, who has been to that Fry’s, by the way?  Okay, I’m not making this up right?  Yeah, but for the rest of you, oh what a treat you have in store.
+
+</p><p>All right, let me look at a couple of examples, all right.  Because all I want to do, I want to show you that again, you have no recourse other than the definitions so, if you’re asked to compute a specific a specific Fourier transform, sometimes there’re tricks but more often than not, it’s just a question of carrying out the integration.  So all those, you know, hard-won skills of integration, by parts integration, but substitution and things like that, those are going to be coming into play when you actually have to calculate specific Fourier transforms.  
+
+</p><p>But again, it like, you know, tables of intervals.  People have done this so the, you know, the collective hard-won experience is already out there, but you have to know a certain amount of it.  And a certain amount of this I think you have to do for yourself just so you have the confidence in doing the calculations, just so you see how it goes.  
+
+</p><p>So related actually to the rectangle function, is the triangle function, a member of the first homework set that everybody loved so much.  The basic triangle function is 1 minus absolute value of T if T is less than or equal to 1 and 0 if absolute value of T is greater than or equal to 1 and it looks like this.  The graph looks like this.  Called a triangle function because the graph looks like a triangle.  It goes up – it’s 0 outside the interval for minus 1 to 1 and then it goes up the slope 1 up to a height of 1.  Okay?  Nothing to it, very simple function. 
+
+</p><p>But it’s a very important function in itself.  What about its Fourier transform?  So the Fourier transform of the triangle function, evaluated S, is again the interval for minus infinity to infinity of either the minus 2 PI I S T [inaudible] of T, D T.  Don’t skip this step, all right.  Write that down so you realize what you have to write next.  
+
+What you have to write next depends on how the function is defined.  The function is zero outside the interval for minus 1 to 1 so it’s only the interval for minus 1 to 1 that you have to worry about but the function comes in two pieces.  It has a different formula on the interval for minus 1 to 0 and on the interval from 0 to 1.  And they have to be treated separately.  So this is the interval for minus 1 to 0 of either the minus 2 PI I S T and on the interval from minus 1 to 0, with 1 minus absolute value of T, T is negative there so it’s 1 plus T, D T, and then on the interval from 0 to 1, it’s either the minus 2 PI S T times the formula for the triangle function on that interval which is 1 minus T.  You cannot avoid this.  All right, you cannot combine these intervals.
+
+</p><p>Well, you can do a little bit, you know, but basically you cannot combine these intervals.  You have to do the intervals separately.  
+
+</p><p>So how do you do them?  Well, I’m not going to carry it out into detail, but I want to say just enough so you get a feeling for the kind of calculations that you have to do.  Some of those calculations when you’re calculating Fourier coefficients, there’re only a few techniques that are in play here.  All right, and in this case, the technique is integration by parts.  All right?  That’s what comes up.  
+
+</p><p>So let me remind you the formula for integration by parts.  Integral from A to B of U D V.  This is everybody’s favorite.  It is UV,   sometimes what you don’t remember is what integration by parts looks like for definite intervals, so the interval of U V D is U V divided by between A and B minus integral from A to B of V D U.  We all know what that means.  What that means is that in your integrand, you’re original interval, you have to identify what the U part is and what the DV part is and I’m not here to teach you calculus, but that’s what you have to do.  All right?
+
+</p><p>So what do you do in this case?  So let’s just look at the first interval, then we’ll wrap it up.  So let’s look at the interval from minus 1 to 0 of 1 plus T times E to the minus 2 PI I S T , D T.  So looking at this you have to decide, you have to look deep in your sole and decide what is U.  What is DV and what are the consequences of that.  All right?
+
+</p><p>Well let me tell you.  All right, U in this case, you take to be 1 plus T, and DV you take to be E to the minus 2 PI I S T, DT.  All right, you do that because you look ahead, you are no fool and if you take U equals 1 plus T it’s going to simply on the other part of the interval because then D is just going to be DT.  DU is DT, and then if DV is equal to E to the minus 2 PI S T, V is equal to, you integrate with respect to V that means you’re regarding S as a constant so it’s minus 1 over 2 PI I S, either the minus 2 PI I S T.
+
+</p><p>I love to integrate.  I spent a lot of weekend home alone.  You know, just integrating.
+
+</p><p>It’s a great ice breaker at parties.  Do you like integration by parts?  I do.
+
+</p><p>So if you do this, then it becomes – then the interval from minus 1 to 0 of 1 plus T, T to the minus 2 PI S T, D T becomes U V, that’s 1 plus T times minus 1 over 2 PI S either the minus 2 PI I S T, evaluated between minus 1 and zero, all right?  Minus the interval from minus 1 to 0 of VDU, which is V is minus 1 over 2 PI I S, P to the minus 2 PI I S T and DU is just DT.  All right, so that integral has become simpler because now it’s just an integral of a complex exponential.  You’re going to expect a T; this S is a constant out here, okay?  That S is a constant out there.  I have this right don’t I?  Yeah. 
+
+</p><p>Okay now, I’m not going to take it from here.  I love to integrate, but not public, so I will not carry this out any further but let me tell you what happened.  You can, all right, and you probably should.  I think it’s carried out a little bit more in the notes.  You have to do the same thing, same thing for the other integral.  The two integrals, you cannot avoid this.  All right, tough break, but it’s just the way it is.  You can carry out this integration and what do you get?  So you get, it’s quite a nice formula actually.  You get, at the end of the day, it.  That the Fourier transform of the rectangle function is sign squared of PI S divided by PI squared, S squared.  That is to say, it is sync squared of S.  Isn’t that cool?
+
+</p><p>The Fourier transform of the triangle function is sync squared.  
+
+</p><p>Now in fact – so once again, Fourier transform of the triangle function of S is sync squared S.  All right now, that’s   its sort of fun if you like that sort of thing, to see that emerging from this picture, but I’m not going to do that.  I’m not going to do that.  I’m not going to carry it out. 
+
+</p><p>In fact, we will, next week, actually see a different reason why this is true.  I mean, it’s actually not a shock.  There’s a deeper reason why this is true, having to do with convolution.  But that’s a little bit in the future, it’s just   but it can be done just by straight calculation, by no more than that.  And again, for many Fourier transforms, for many basic functions that you need to know that you work with and you need to know the answer for, you have no recourse other than to carry out the integration to actually do it.  All right? 
+
+</p><p>Again, you should do a certain amount of that, it’s one of these things where it’s good for you to do but its true just so you keep your facilities up because there’re going to be times when you have to do that.  All right, no numerical work, mat-lab won’t do it for you, you know you won’t be able to find it in a particular table; you have to carry it out.  And again, the techniques are usually not beyond what you’ve already done.  They’re typically involving either integration by substitution, integration by parts, something like that.
+
+</p><p>That’s all that’s involved here, and carrying out integrating the complex exponentials is the same, involves the same sort of steps, same sort of techniques as you learned in the real case when you were just learning ordinary calculus.  All right? 
+
+</p><p>I will wrap it up there and then on Monday, I’m going to pick up again with a couple more examples and then also develop the general properties of Fourier transform as we go on our path. 
+
+</p><p>Thank you all, have a good weekend. 
+</p><p>
+[End of Audio]
+</p><p>
+Duration:  49 minutes
+</p><p>
+</html>
