@@ -213,7 +213,7 @@ void test()
 
 int main()
 {
-	//ugly_solution::test();
+	ugly_solution::test();
 
 	c_style_solution::test();
 
