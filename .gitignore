@@ -3,3 +3,88 @@
 *.gz
 *.rar
 普林斯顿微积分读本 修订版 ,Adrian Banner ,P648 ,2016.10.pdf
+
+*.in
+*.out
+
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# vs
+.vs/
+.vscode/
+*.sdf
+#*.sln
+*.suo
+*.ipch
+*.ilk
+*.pdb
+*.map
+#*.vcxproj
+*.filters
+*.log
+*.pd_
+*.opensdf
+*.user
+Debug/
+Release/
+ReleaseD/
+
+# vc6
+*.dsp
+*.dsw
+*.ncb
+*.opt
+*.plg
+*.clw
+*.aps
+*.log
+*.pch
+*.idb
+*.pdb
+*.ilk
+*.sbr
+*.bsc
+*.map
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Compressed Files
+*.zip
+*.7z
+*.rar
+*.gz
+*.bz2
+*.tar
+
+# Executables
+*.exe
+!AlarmCenter_Setup.exe
+*.out
+*.app
+
+# Database files
+*.mdb
+*.ldb
+*.db
+
+# Resource files
+*.manifest
+*.rc
+*.rc2
+*.cur
+*.avi
+*.wav
