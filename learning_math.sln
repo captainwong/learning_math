@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "formula", "高中数学\cod
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "勾股数", "高中数学\code\勾股数\勾股数.vcxproj", "{EB809A28-69E3-489C-B3D8-DA2C8703927D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "combination", "高中数学\code\combination\combination.vcxproj", "{56D5EE0E-2FA5-42A4-8C92-9E199096F71B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -53,6 +55,14 @@ Global
 		{EB809A28-69E3-489C-B3D8-DA2C8703927D}.Release|x64.Build.0 = Release|x64
 		{EB809A28-69E3-489C-B3D8-DA2C8703927D}.Release|x86.ActiveCfg = Release|Win32
 		{EB809A28-69E3-489C-B3D8-DA2C8703927D}.Release|x86.Build.0 = Release|Win32
+		{56D5EE0E-2FA5-42A4-8C92-9E199096F71B}.Debug|x64.ActiveCfg = Debug|x64
+		{56D5EE0E-2FA5-42A4-8C92-9E199096F71B}.Debug|x64.Build.0 = Debug|x64
+		{56D5EE0E-2FA5-42A4-8C92-9E199096F71B}.Debug|x86.ActiveCfg = Debug|Win32
+		{56D5EE0E-2FA5-42A4-8C92-9E199096F71B}.Debug|x86.Build.0 = Debug|Win32
+		{56D5EE0E-2FA5-42A4-8C92-9E199096F71B}.Release|x64.ActiveCfg = Release|x64
+		{56D5EE0E-2FA5-42A4-8C92-9E199096F71B}.Release|x64.Build.0 = Release|x64
+		{56D5EE0E-2FA5-42A4-8C92-9E199096F71B}.Release|x86.ActiveCfg = Release|Win32
+		{56D5EE0E-2FA5-42A4-8C92-9E199096F71B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +72,7 @@ Global
 		{E6949D6C-C398-4C22-8427-26E6263178C2} = {234C5593-2D2C-4D1A-A3CE-DC248BAB45F3}
 		{AC2D41CC-5734-4F50-85E8-0A452B27900E} = {234C5593-2D2C-4D1A-A3CE-DC248BAB45F3}
 		{EB809A28-69E3-489C-B3D8-DA2C8703927D} = {234C5593-2D2C-4D1A-A3CE-DC248BAB45F3}
+		{56D5EE0E-2FA5-42A4-8C92-9E199096F71B} = {234C5593-2D2C-4D1A-A3CE-DC248BAB45F3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5551180-D73D-4F73-B65E-74123C3D3849}

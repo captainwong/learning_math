@@ -24,12 +24,12 @@ inline int arrangement(int n, int m) {
 }
 
 // n 个不同字符中取出 m 个的所有排列
-inline std::vector<std::string> arrangement(const std::vector<char>& n, int m) {
+inline std::vector<std::string> arrangement(const std::vector<std::string>& n, int m) {
 	assert(n.size() >= m);
 
 	std::vector<std::string> res;
 	std::vector<int> taken;
-	std::function<void(const std::vector<char>& in, std::vector<std::string>& out, std::vector<int>& taken, int n)> take;
+	std::function<void(const std::vector<std::string>& in, std::vector<std::string>& out, std::vector<int>& taken, int n)> take;
 
 	auto is_taken = [](const std::vector<int>& taken, int i) {
 		for (const auto& j : taken) {
@@ -40,7 +40,7 @@ inline std::vector<std::string> arrangement(const std::vector<char>& n, int m) {
 		return false;
 	};
 
-	take = [&take, &is_taken](const std::vector<char>& in, std::vector<std::string>& out, std::vector<int>& taken, int n) {
+	take = [&take, &is_taken](const std::vector<std::string>& in, std::vector<std::string>& out, std::vector<int>& taken, int n) {
 		auto origin_taken = taken;
 		for (int i = 0; i < in.size(); i++) {
 			if (is_taken(taken, i)) continue;
@@ -50,7 +50,7 @@ inline std::vector<std::string> arrangement(const std::vector<char>& n, int m) {
 			} else {
 				std::string str;
 				for (const auto& j : taken) {
-					str.push_back(in[j]);
+					str += (in[j]);
 				}
 				out.push_back(str);
 			}

@@ -6,7 +6,7 @@
 // 人教A版高中数学选修2-3，page20
 void p1()
 {
-	auto res = arrangement({ 'a', 'b', 'c', 'd', }, 2);
+	auto res = arrangement({ "a", "b", "c", "d", }, 2);
 	std::cout << res.size() << std::endl;
 	for (const auto& str : res) {
 		std::cout << str << std::endl;
@@ -15,7 +15,7 @@ void p1()
 
 void p2()
 {
-	auto res = arrangement({ 'a', 'b', 'c', 'd', 'e' }, 2);
+	auto res = arrangement({ "a", "b", "c", "d", "e" }, 2);
 	std::cout << res.size() << std::endl;
 	for (const auto& str : res) {
 		std::cout << str << std::endl;
