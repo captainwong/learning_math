@@ -8,4 +8,6 @@
 
 - [滴答课堂-高中数学-三角函数](https://www.bilibili.com/video/BV1G7411A72)
 
+- [高中数学 凌海燕](https://www.youtube.com/playlist?list=PLR1ACzwrLF_09MidJqluugHTHQCErNeSb)
+
 - 公众号《品数学》
