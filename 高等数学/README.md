@@ -5,3 +5,4 @@
 - [【梨米特】同济七版《高等数学》全程教学视频](https://www.bilibili.com/video/BV1864y1T7Ks)
 - [《高等数学》同济版 全程教学视频（宋浩老师）](https://www.bilibili.com/video/BV1Eb411u7Fw)
 - [【高等数学】上海交通大学-乐经良](https://www.bilibili.com/video/BV1EW411H7Vj)
+- [【樊顺厚】《高等数学》全集](https://www.bilibili.com/video/BV1FU4y1p7f3)
