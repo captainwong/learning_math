@@ -7,3 +7,4 @@
 - [【国防科技大学】高等数学（全·配字幕）](https://www.bilibili.com/video/BV1h7411M73b)
 - [《高等数学》同济版 全程教学视频（宋浩老师）](https://www.bilibili.com/video/BV1Eb411u7Fw)
 - [【高等数学】上海交通大学-乐经良](https://www.bilibili.com/video/BV1EW411H7Vj)
+- [《高等数学》同济7版全程超精讲，耗时11个月打造，全面细致；共计128小时，拒绝速成！](https://www.bilibili.com/video/BV1a14y187qn)
