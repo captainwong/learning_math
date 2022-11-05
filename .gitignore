@@ -71,7 +71,7 @@ ReleaseD/
 *.tar
 
 # Executables
-*.exe
+#*.exe
 !AlarmCenter_Setup.exe
 *.out
 *.app
