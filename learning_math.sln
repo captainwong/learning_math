@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "割圆术", "高等数学\c
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bisection", "高中数学\code\bisection\bisection.vcxproj", "{62603C0F-BAE4-4026-87D1-734E7DF38E92}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "line", "高中数学\code\line\line.vcxproj", "{FC3CB520-E517-479B-A4F4-5AB6C80DFCED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -95,6 +97,14 @@ Global
 		{62603C0F-BAE4-4026-87D1-734E7DF38E92}.Release|x64.Build.0 = Release|x64
 		{62603C0F-BAE4-4026-87D1-734E7DF38E92}.Release|x86.ActiveCfg = Release|Win32
 		{62603C0F-BAE4-4026-87D1-734E7DF38E92}.Release|x86.Build.0 = Release|Win32
+		{FC3CB520-E517-479B-A4F4-5AB6C80DFCED}.Debug|x64.ActiveCfg = Debug|x64
+		{FC3CB520-E517-479B-A4F4-5AB6C80DFCED}.Debug|x64.Build.0 = Debug|x64
+		{FC3CB520-E517-479B-A4F4-5AB6C80DFCED}.Debug|x86.ActiveCfg = Debug|Win32
+		{FC3CB520-E517-479B-A4F4-5AB6C80DFCED}.Debug|x86.Build.0 = Debug|Win32
+		{FC3CB520-E517-479B-A4F4-5AB6C80DFCED}.Release|x64.ActiveCfg = Release|x64
+		{FC3CB520-E517-479B-A4F4-5AB6C80DFCED}.Release|x64.Build.0 = Release|x64
+		{FC3CB520-E517-479B-A4F4-5AB6C80DFCED}.Release|x86.ActiveCfg = Release|Win32
+		{FC3CB520-E517-479B-A4F4-5AB6C80DFCED}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,6 +118,7 @@ Global
 		{BD12D88C-057E-4843-8302-ABC94456B682} = {234C5593-2D2C-4D1A-A3CE-DC248BAB45F3}
 		{CB4890CA-878F-49C4-8D4D-532617537861} = {5D647E75-FDCE-47D4-BA9F-F54C9EB9FAEE}
 		{62603C0F-BAE4-4026-87D1-734E7DF38E92} = {234C5593-2D2C-4D1A-A3CE-DC248BAB45F3}
+		{FC3CB520-E517-479B-A4F4-5AB6C80DFCED} = {234C5593-2D2C-4D1A-A3CE-DC248BAB45F3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5551180-D73D-4F73-B65E-74123C3D3849}
