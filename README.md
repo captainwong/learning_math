@@ -28,3 +28,5 @@ Notes for math
       $$
       \sqrt 3
       $$
+
+5. `\bold` 也不支持了
