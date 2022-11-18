@@ -9,14 +9,19 @@ Notes for math
 ## 碎碎念
 
 1. 2022年11月18日18:49:54 非顶级有序列表下不能写 `math blocks` 了，只能写单行...
+2. test 
+   
+   $$
+   \sqrt 3
+   $$
 
-2. test $\sqrt 3$
+3. test $\sqrt 3$
 
    $$
    \sqrt 3
    $$
 
-3. dfsdf
+4. dfsdf
    1. test1
    2. test2
       
