@@ -1,0 +1,8 @@
+| | $f(x)\rightarrow A$ | $f(x)\rightarrow \infty$ | $f(x)\rightarrow +\infty$ | $f(x)\rightarrow -\infty$ | 
+|-|---------------------|--------------------------|---------------------------|---------------------------|
+| $x\rightarrow x_0$ | $\forall \varepsilon \gt 0, \exists \delta \gt 0$, <br>当 $0\lt \|x-x_0\| \lt \delta$ 时，<br> 有 $\|f(x)-A\|\lt \varepsilon$ | | |  |
+| $x\rightarrow x_0^+$ | | | | $\forall M \gt 0, \exists \delta \gt 0$, <br>当 $0 \lt x-x_0\lt \delta$ 时，<br>有 $f(x)\lt -M$ |
+| $x\rightarrow x_0^-$ | | | | $\forall M \gt 0, \exists \delta \gt 0$, <br>当 $0 \gt x_0-x\gt -\delta$ 时，<br>有 $f(x)\lt -M$ |
+| $x\rightarrow \infty$ | | $\forall M \gt 0, \exists X \gt 0$, <br>当 $\|x\| \gt X$ 时，<br>有 $f(x) \gt M$ | | |
+| $x\rightarrow +\infty$ | | | $\forall M \gt 0, \exists X \gt 0$, <br>当 $x \gt X$ 时，<br>有 $f(x) \gt M$ | |
+| $x\rightarrow -\infty$ | | | | $\forall M \gt 0, \exists X \gt 0$, <br>当 $x \lt -X$ 时，<br>有 $f(x) \lt -M$ |
