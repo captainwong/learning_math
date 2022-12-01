@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "估计根号2", "高中数�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "牛顿法求方程近似解", "高中数学\code\牛顿法求方程近似解\牛顿法求方程近似解.vcxproj", "{02EDBEFD-8C6C-48A8-89A8-35FE18C55EFA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polynomial", "高等数学\code\Polynomial\Polynomial.vcxproj", "{1E3F535F-CFA4-45A1-B4D3-1AEAB11FF43D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -125,6 +127,14 @@ Global
 		{02EDBEFD-8C6C-48A8-89A8-35FE18C55EFA}.Release|x64.Build.0 = Release|x64
 		{02EDBEFD-8C6C-48A8-89A8-35FE18C55EFA}.Release|x86.ActiveCfg = Release|Win32
 		{02EDBEFD-8C6C-48A8-89A8-35FE18C55EFA}.Release|x86.Build.0 = Release|Win32
+		{1E3F535F-CFA4-45A1-B4D3-1AEAB11FF43D}.Debug|x64.ActiveCfg = Debug|x64
+		{1E3F535F-CFA4-45A1-B4D3-1AEAB11FF43D}.Debug|x64.Build.0 = Debug|x64
+		{1E3F535F-CFA4-45A1-B4D3-1AEAB11FF43D}.Debug|x86.ActiveCfg = Debug|Win32
+		{1E3F535F-CFA4-45A1-B4D3-1AEAB11FF43D}.Debug|x86.Build.0 = Debug|Win32
+		{1E3F535F-CFA4-45A1-B4D3-1AEAB11FF43D}.Release|x64.ActiveCfg = Release|x64
+		{1E3F535F-CFA4-45A1-B4D3-1AEAB11FF43D}.Release|x64.Build.0 = Release|x64
+		{1E3F535F-CFA4-45A1-B4D3-1AEAB11FF43D}.Release|x86.ActiveCfg = Release|Win32
+		{1E3F535F-CFA4-45A1-B4D3-1AEAB11FF43D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -141,6 +151,7 @@ Global
 		{FC3CB520-E517-479B-A4F4-5AB6C80DFCED} = {234C5593-2D2C-4D1A-A3CE-DC248BAB45F3}
 		{BB1062F8-F2CA-4010-AA12-FA86B478F240} = {234C5593-2D2C-4D1A-A3CE-DC248BAB45F3}
 		{02EDBEFD-8C6C-48A8-89A8-35FE18C55EFA} = {234C5593-2D2C-4D1A-A3CE-DC248BAB45F3}
+		{1E3F535F-CFA4-45A1-B4D3-1AEAB11FF43D} = {5D647E75-FDCE-47D4-BA9F-F54C9EB9FAEE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5551180-D73D-4F73-B65E-74123C3D3849}
