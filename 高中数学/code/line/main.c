@@ -96,6 +96,10 @@ GeneralForm generalFromTwoPoint(TwoPonitForm line) {
 	return g;
 }
 
+// 点在直线上的投影
+//Point pointProjectionOnLine(Point A, )
+
+
 int main()
 {
 
