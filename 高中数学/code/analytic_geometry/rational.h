@@ -46,7 +46,7 @@ struct Rational {
     ///////////////////// properteis /////////////////////
 
     bool negative() const {
-        return (p < 0 && q > 0) || (p > 0 || q < 0);
+        return (p < 0 && q > 0) || (p > 0 && q < 0);
     }
 
     bool positive() const {
@@ -202,6 +202,27 @@ Rational<T> abs(Rational<T> r) {
 template <typename T>
 Rational<T> sqrt(const Rational<T>& r) {
     return ::sqrt(r.p * 1.0 / r.q);
+}
+
+/////////////////////// global operators /////////////////////////
+template <typename T = int>
+Rational<T> operator+(const T& n, const Rational<T>& r) {
+    return Rational<T>{n, 1} + r;
+}
+
+template <typename T = int>
+Rational<T> operator-(const T& n, const Rational<T>& r) {
+    return Rational<T>{n, 1} - r;
+}
+
+template <typename T = int>
+Rational<T> operator*(const T& n, const Rational<T>& r) {
+    return Rational<T>{n, 1} * r;
+}
+
+template <typename T = int>
+Rational<T> operator/(const T& n, const Rational<T>& r) {
+    return Rational<T>{n, 1} / r;
 }
 
 

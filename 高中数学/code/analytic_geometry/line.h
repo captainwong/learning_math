@@ -13,7 +13,7 @@ namespace line {
 // y-y_0 = k(x-x_0)
 // 无法表示垂直于x轴的直线，即斜率不为无穷
 // 不竖
-template <typename T>
+template <typename T = int>
 struct PointSlopeForm {
 	Point<T> pt;
 	Rational<T> k; // slope
@@ -23,7 +23,7 @@ struct PointSlopeForm {
 // y=kx+b
 // 同点斜式，无法表示垂直于x轴的直线，即斜率不为无穷
 // 不竖
-template <typename T>
+template <typename T = int>
 struct SlopeIntersectForm {
 	Rational<T> k; // slope
 	Rational<T> b; // intercept
@@ -33,7 +33,7 @@ struct SlopeIntersectForm {
 // x/a+y/b=1
 // 无法表示截距为0的直线，即斜率不为0不为无穷
 // 不横不竖不过原点
-template <typename T>
+template <typename T = int>
 struct IntersectForm {
 	Rational<T> a, b;
 };
@@ -43,7 +43,7 @@ struct IntersectForm {
 // x1不等x2, y1不等y2
 // 无法表示平行于x轴或平行于y轴的直线，即斜率不等0且不为无穷
 // 不横不竖
-template <typename T>
+template <typename T = int>
 struct TwoPonitForm {
 	Point<T> p1, p2;
 };
@@ -51,7 +51,7 @@ struct TwoPonitForm {
 // 一般式方程
 // ax+by+c=0
 // a,b不同时为0
-template <typename T>
+template <typename T = int>
 struct Line {
 	Rational<T> a, b, c;
 
@@ -132,13 +132,64 @@ struct Line {
 		return distance(pt) == 0;
 	}
 
+
 	///////////////////// math /////////////////////
+
+	// 以 x 计算 y
+	// 要求 b!=0 即 斜率存在
+	Rational<T> y(const Rational<T>& x) const {
+		return (-a * x - c) / b;
+	}
+
+	// x=0, y=?
+	Rational<T> y0() const {
+		return y(0);
+	}
+
+	// 以 y 计算 x
+	// 要求 a!=0 即斜率不为0
+	Rational<T> x(const Rational<T>& y) const {
+		return (-b * y - c) / a;
+	}
+
+	// y=0, x=?
+	Rational<T> x0() const {
+		return x(0);
+	}
+
+
+	///////////////////// point /////////////////////
 
 	// 点到直线距离
 	Rational<T> distance(const Point<T>& p) const {
 		return abs(a * p.x + b * p.y + c) / sqrt(a * a + b * b);
 	}
 
+	// 点在直线上的投影
+	Point<T> projection(const Point<T>& p) const {
+		Rational<T> denom = a * a + b * b;
+		Rational<T> x = b * b * p.x - a * b * p.y - a * c;
+		Rational<T> y = a * a * p.y - a * b * p.x - b * c;
+		x /= denom;
+		y /= denom;
+		return { x, y };
+	}
+
+	// 点关于直线的对称点
+	Point<T> symmetricPoint(const Point<T>& p) const {
+		Rational<T> denom = a * a + b * b;
+		Rational<T> x = (b * b - a * a) * p.x - 2 * a * b * p.y - 2 * a * c;
+		Rational<T> y = (a * a - b * b) * p.y - 2 * a * b * p.x - 2 * b * c;
+		x /= denom;
+		y /= denom;
+		return { x, y };
+	}
+
+	
+
+
+	///////////////////// line /////////////////////
+	
 	// 直线到直线距离
 	Rational<T> distance(const Line<T>& rhs) const {
 		if (!parallelTo(rhs)) return 0;
@@ -147,20 +198,50 @@ struct Line {
 		return abs(l1.c - l2.c) / sqrt(l1.a * l1.a + l1.b * l1.b);
 	}
 
-	// 点在直线上的投影
-	Point<T> projection(const Point<T>& pt) const {
-		Rational<T> denom = a * a + b * b;
-		Rational<T> x = b * b * pt.x - a * b * pt.y - a * c;
-		Rational<T> y = a * a * pt.y - a * b * pt.x - b * c;
-		x /= denom;
-		y /= denom;
-		return { x, y };
+	// 关于点的对称直线
+	Line symmetricLine(const Point<T>& p) const {
+		Line l = *this;
+		Rational<T> m = -(a * p.x + b * p.y);
+		Rational<T> n = abs(a * p.x + b * p.y + c);
+		Rational<T> C = m + n;
+		if (C != l.c) {
+			l.c = C;
+		} else {
+			l.c = m - n;
+		}
+		return l;
 	}
+
+	// 过一点的垂线
+	Line perpendicular(const Point<T>& p) const {
+		Line l;
+		if (b != 0) { // 斜率存在
+			if (a != 0) { // 斜率不为0
+				PointSlopeForm<int> vert{ p, b / a };
+				l.fromPointSlopeForm(vert);
+			} else { // 斜率为0
+				l.a = 0;
+				l.b = 1;
+				l.c = -p.y;
+			}
+		} else { // 斜率不存在
+			l.a = 1;
+			l.b = 0;
+			l.c = -p.x;
+		}
+		l.simplify();
+		return l;
+	}
+
+	// 关于直线L的对称直线
+	//Line symmetricLine(const Line<T>& L) const {
+
+	//}
 
 
 	///////////////////// utils /////////////////////
 
-	// 化为无分数形式
+	// 化为abc都为整数且a>=0的形式
 	void simplify() {
 		Rational<T> A = abs(a);
 		Rational<T> B = abs(b);
@@ -183,9 +264,9 @@ struct Line {
 			C.p /= g;
 		}
 
-		a = A;
-		b = B;
-		c = C;
+		a = a.negative() ? -A : A;
+		b = b.negative() ? -B : B;
+		c = c.negative() ? -C : C;
 
 		if (a.negative()) {
 			a.negate();
