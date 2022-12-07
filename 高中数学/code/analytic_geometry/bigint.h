@@ -275,7 +275,7 @@ public:
 		auto dividend = abs(*this);
 		auto divisor = abs(rhs);
 		if (dividend < divisor) {
-			return {};
+			return std::make_tuple(quotient, dividend);
 		}
 
 		while (dividend >= divisor) {
@@ -448,6 +448,32 @@ public:
 		return sign == '-' ? ("-" + value) : value;
 	}
 
+	int toInt() const {
+		if (sign == '+') {
+			if (*this > BigInt(INT_MAX)) {
+				throw std::logic_error("sorry, too big to convert to int");
+			}
+		} else {
+			if (*this < BigInt(INT_MIN)) {
+				throw std::logic_error("sorry, too big to convert to int");
+			}
+		}
+		return std::stoi(value);
+	}
+
+	long long toLongLong() const {
+		if (sign == '+') {
+			if (*this > BigInt(LLONG_MAX)) {
+				throw std::logic_error("sorry, too big to convert to long long");
+			}
+		} else {
+			if (*this < BigInt(LLONG_MIN)) {
+				throw std::logic_error("sorry, too big to convert to long long");
+			}
+		}
+		return std::stoll(value);
+	}
+
 	static BigInt fromString(const std::string& str) {
 		auto chk = [](const std::string& str) {
 			for (const auto& c : str) {
@@ -525,6 +551,44 @@ inline BigInt lcm(const BigInt& a, const BigInt& b) {
 	if (a == 0 || b == 0) { return {}; }
 	BigInt g = gcd(a, b);
 	return abs(a * b) / g;
+}
+
+// a^b
+inline BigInt pow(const BigInt& a, const BigInt& b) {
+	if (b < 0) {
+		if (a < 0) {
+			throw std::logic_error("divide by zero");
+			return {};
+		}
+		return a == 1 ? 1 : 0;
+	} else if (b == 0) {
+		if (a == 0) {
+			throw std::logic_error("0 to the 0");
+		}
+		return 1;
+	}
+
+	BigInt res = a;
+	while (b > 1) {
+		res *= a;
+	}
+
+	return res;
+}
+
+inline BigInt sqrt(const BigInt& a) {
+	if (a < 0) {
+		throw std::logic_error("sqrt of negative");
+		return 0;
+	}
+
+	if (a >= BigInt(LLONG_MAX)) {
+		throw std::invalid_argument("sorry, too big for me");
+		return 0;
+	}
+
+	long long ll = a.toLongLong();
+	return BigInt((long long)::sqrt(ll));
 }
 
 //////////////////////////////////////////////////////////

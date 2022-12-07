@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="analytic_geometry.h" />
     <ClInclude Include="bigint.h" />
+    <ClInclude Include="bigrational.h" />
     <ClInclude Include="line.h" />
     <ClInclude Include="point.h" />
     <ClInclude Include="rational.h" />
@@ -149,6 +150,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tst_bigint.cpp" />
+    <ClCompile Include="tst_line.cpp" />
     <ClCompile Include="tst_rational.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

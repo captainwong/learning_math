@@ -43,6 +43,111 @@ struct Rational {
         }
     }
 
+    ///////////////////// properteis /////////////////////
+
+    bool negative() const {
+        return (p < 0 && q > 0) || (p > 0 || q < 0);
+    }
+
+    bool positive() const {
+        return !negative();
+    }
+
+
+    ///////////////////// unary operators /////////////////////
+
+    Rational operator+() const {
+        return *this;
+    }
+
+    Rational operator-() const {
+        Rational r = *this;
+        r.negate();
+        return r;
+    }
+
+    ///////////////////// binary operators /////////////////////
+
+    Rational add(const Rational& rhs) const {
+        Rational r;
+        r.q = lcm(q, rhs.q);
+        r.p = p * r.q / q + rhs.p * r.q / rhs.q;
+        r.simplify();
+        return r;
+    }
+
+    Rational sub(const Rational& rhs) const {
+        Rational r = rhs; r.p = -r.p;
+        return add(r);
+    }
+
+    Rational multiply(const Rational& rhs) const {
+        Rational r;
+        r.p = p * rhs.p;
+        r.q = q * rhs.q;
+        r.simplify();
+        return r;
+    }
+
+    Rational divide(const Rational& rhs) const {
+        Rational r;
+        r.p = p * rhs.q;
+        r.q = q * rhs.p;
+        r.simplify();
+        return r;
+    }
+
+    Rational operator+(const Rational& rhs) const {
+        return add(rhs);
+    }
+
+    Rational operator-(const Rational& rhs) const {
+        return sub(rhs);
+    }
+
+    Rational operator*(const Rational& rhs) const {
+        return multiply(rhs);
+    }
+
+    Rational operator/(const Rational& rhs) const {
+        return divide(rhs);
+    }
+
+
+    ///////////////////// arithmetic assignments /////////////////////
+
+    Rational& operator+=(const Rational& rhs) {
+        Rational r = add(rhs);
+        return *this = r;
+    }
+
+    Rational& operator-=(const Rational& rhs) {
+        Rational r = sub(rhs);
+        return *this = r;
+    }
+
+    Rational operator*=(const Rational& rhs) {
+        auto r = multiply(rhs);
+        return *this = r;
+    }
+
+    Rational operator/=(const Rational& rhs) {
+        auto r = divide(rhs);
+        return *this = r;
+    }
+
+    ///////////////////// relations /////////////////////
+
+    bool operator==(const Rational& rhs) const {
+        return p == rhs.p && q == rhs.q;
+    }
+
+    bool operator!=(const Rational& rhs) const {
+        return !(*this == rhs);
+    }
+
+    ///////////////////// utils /////////////////////
+
     void make_sure_q_is_positive() {
         if (q < 0) {
             p = -p;
@@ -57,73 +162,16 @@ struct Rational {
         make_sure_q_is_positive();
     }
 
-    Rational add(const Rational& rhs) const {
-        Rational r;
-        r.q = lcm(q, rhs.q);
-        r.p = p * r.q / q + rhs.p * r.q / rhs.q;
+    Rational simplified() const {
+        auto r = *this;
         r.simplify();
         return r;
     }
 
-    Rational operator+(const Rational& rhs) const {
-        return add(rhs);
-    }
 
-    Rational& operator+=(const Rational& rhs) {
-        Rational r = add(rhs);
-        return *this = r;
-    }
-
-    Rational sub(const Rational& rhs) const {
-        Rational r = rhs; r.p = -r.p;
-        return add(r);
-    }
-
-    Rational operator-(const Rational& rhs) const {
-        return sub(rhs);
-    }
-
-    Rational& operator-=(const Rational& rhs) {
-        Rational r = sub(rhs);
-        return *this = r;
-    }
-
-    Rational multiply(const Rational& rhs) const {
-        Rational r;
-        r.p = p * rhs.p;
-        r.q = q * rhs.q;
-        r.simplify();
-        return r;
-    }
-
-    Rational operator*(const Rational& rhs) const {
-        return multiply(rhs);
-    }
-
-    Rational operator*=(const Rational& rhs) {
-        auto r = multiply(rhs);
-        return *this = r;
-    }
-
-    Rational divide(const Rational& rhs) const {
-        Rational r;
-        r.p = p * rhs.q;
-        r.q = q * rhs.p;
-        r.simplify();
-        return r;
-    }
-
-    Rational operator/(const Rational& rhs) const {
-        return divide(rhs);
-    }
-
-    Rational operator/=(const Rational& rhs) {
-        auto r = divide(rhs);
-        return *this = r;
-    }
-
-    bool operator==(const Rational& rhs) const {
-        return p == rhs.p && q == rhs.q;
+    void negate() {
+        make_sure_q_is_positive();
+        p = -p;
     }
 
     std::string toString(char c_div = '/') const {
@@ -139,5 +187,22 @@ struct Rational {
         return s;
     }
 };
+
+template <typename T>
+Rational<T> abs(Rational<T> r) {
+    if (r.p < 0) {
+        r.p = -r.p;
+    }
+    if (r.q < 0) {
+        r.q = -r.q;
+    }
+    return r;
+}
+
+template <typename T>
+Rational<T> sqrt(const Rational<T>& r) {
+    return ::sqrt(r.p * 1.0 / r.q);
+}
+
 
 }
