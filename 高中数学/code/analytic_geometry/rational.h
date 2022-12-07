@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include "tostring.h"
 
 namespace math {
 
@@ -59,7 +60,7 @@ struct Rational {
     Rational add(const Rational& rhs) const {
         Rational r;
         r.q = lcm(q, rhs.q);
-        r.p = p * (r.q / q) + rhs.p * (r.q / rhs.q);
+        r.p = p * r.q / q + rhs.p * r.q / rhs.q;
         r.simplify();
         return r;
     }
@@ -130,10 +131,10 @@ struct Rational {
         if (p < 0) {
             s.push_back('-');
         }
-        s += std::to_string(p);
+        s += math::toString(p);
         if (q != 1) {
             s.push_back(c_div);
-            s += std::to_string(q);
+            s += math::toString(q);
         }
         return s;
     }

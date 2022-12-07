@@ -1,4 +1,5 @@
 #include "rational.h"
+#include "bigint.h"
 #include <assert.h>
 
 // https://pintia.cn/problem-sets/14/exam/problems/815
@@ -122,11 +123,11 @@ int main()
 
 using namespace math;
 
-Rational<int> read()
+Rational<BigInt> read()
 {
     int p, q;
     scanf("%d/%d", &p, &q);
-    return Rational<int>(p, q);
+    return Rational<BigInt>(p, q);
 }
 
 // PTA提交测试通过
@@ -134,11 +135,11 @@ void pta()
 {
     int N;
     scanf("%d", &N);
-    Rational<int> sum;
+    Rational<BigInt> sum;
     for (int i = 0; i < N; i++) {
         sum += read();
     }
-    sum /= N;
+    sum /= BigInt(N);
     printf("%s\n", sum.toString().c_str());
 }
 
@@ -149,13 +150,13 @@ void tst_rational()
     1/2 1/6 3/6 -5/10
 
     */
-    Rational<int> sum;
-    sum += Rational<int>(1, 2);
-    sum += Rational<int>(1, 6);
-    sum += Rational<int>(3, 6);
-    sum += Rational<int>(-5, 10);
-    sum /= 4;
-    assert(sum == Rational<int>(1, 6));
+    Rational<BigInt> sum;
+    sum += Rational<BigInt>(1, 2);
+    sum += Rational<BigInt>(1, 6);
+    sum += Rational<BigInt>(3, 6);
+    sum += Rational<BigInt>(-5, 10);
+    sum /= BigInt(4);
+    assert(sum == Rational<BigInt>(1, 6));
     //printf("%s\n", sum.toString().c_str());
     
 }

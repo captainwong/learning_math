@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <tuple>
 #include <stdlib.h>
+#include "tostring.h"
 
 namespace math {
 
@@ -73,9 +74,9 @@ public:
 	bool operator<(const BigInt& rhs) const {
 		if (sign == rhs.sign) {
 			if (sign == '+') {
-				return value.size() < rhs.value.size() || value < rhs.value;
+				return value.size() < rhs.value.size() || (value.size() == rhs.value.size() && value < rhs.value);
 			} else {
-				return value.size() > rhs.value.size() || value > rhs.value;
+				return value.size() > rhs.value.size() || (value.size() == rhs.value.size() && value > rhs.value);
 			}
 		} else {
 			return sign == '-';
@@ -83,15 +84,7 @@ public:
 	}
 
 	bool operator>(const BigInt& rhs) const {
-		if (sign == rhs.sign) {
-			if (sign == '+') {
-				return value.size() > rhs.value.size() || value > rhs.value;
-			} else {
-				return value.size() < rhs.value.size() || value < rhs.value;
-			}
-		} else {
-			return sign == '+';
-		}
+		return (*this != rhs) && !(*this < rhs);
 	}
 
 	bool operator<=(const BigInt& rhs) const {
@@ -503,6 +496,7 @@ inline BigInt abs(const BigInt& i) {
 	return i < 0 ? (-i) : i;
 }
 
+// greatest common divisor
 inline BigInt gcd(const BigInt& A, const BigInt& B) {
 	auto a = abs(A);
 	auto b = abs(B);
@@ -513,6 +507,11 @@ inline BigInt gcd(const BigInt& A, const BigInt& B) {
 		return a;
 	}
 	BigInt t;
+	if (a < b) {
+		t = a;
+		a = b;
+		b = t;
+	}
 	while (b != 0) {
 		t = a % b;
 		a = b;
@@ -521,10 +520,19 @@ inline BigInt gcd(const BigInt& A, const BigInt& B) {
 	return a;
 }
 
+// least common multiple
 inline BigInt lcm(const BigInt& a, const BigInt& b) {
 	if (a == 0 || b == 0) { return {}; }
 	BigInt g = gcd(a, b);
 	return abs(a * b) / g;
 }
+
+//////////////////////////////////////////////////////////
+
+template<>
+inline std::string toString(const BigInt& n) {
+	return n.toString();
+}
+
 
 }
