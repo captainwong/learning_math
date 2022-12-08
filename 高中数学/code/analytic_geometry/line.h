@@ -185,19 +185,6 @@ struct Line {
 		return { x, y };
 	}
 
-	
-
-
-	///////////////////// line /////////////////////
-	
-	// 直线到直线距离
-	Rational<T> distance(const Line<T>& rhs) const {
-		if (!parallelTo(rhs)) return 0;
-		Line<T> l1 = *this, l2 = rhs;
-		l1.simplify(); l2.simplify();
-		return abs(l1.c - l2.c) / sqrt(l1.a * l1.a + l1.b * l1.b);
-	}
-
 	// 关于点的对称直线
 	Line symmetricLine(const Point<T>& p) const {
 		Line l = *this;
@@ -210,6 +197,28 @@ struct Line {
 			l.c = m - n;
 		}
 		return l;
+	}
+
+
+	///////////////////// line /////////////////////
+	
+	// 直线到直线距离
+	Rational<T> distance(const Line<T>& rhs) const {
+		if (!parallelTo(rhs)) return 0;
+		Line<T> l1 = *this, l2 = rhs;
+		l1.simplify(); l2.simplify();
+		return abs(l1.c - l2.c) / sqrt(l1.a * l1.a + l1.b * l1.b);
+	}
+
+	// 与另一直线的交点
+	// 调用前确保两直线不平行
+	Point<T> intersectionPoint(const Line<T>& rhs) const {
+		Rational<T> denom = a * rhs.b - rhs.a * b;
+		Rational<T> x = b * rhs.c - rhs.b * c;
+		Rational<T> y = rhs.a * c - a * rhs.c;
+		x /= denom;
+		y /= denom;
+		return { x, y };
 	}
 
 	// 过一点的垂线
@@ -234,9 +243,24 @@ struct Line {
 	}
 
 	// 关于直线L的对称直线
-	//Line symmetricLine(const Line<T>& L) const {
-
-	//}
+	Line symmetricLine(const Line<T>& L) const {
+		if (parallelTo(L)) {
+			Point<T> p{ 0, L.y0() };
+			return symmetricLine(p);
+		} else {
+			Point<T> o = intersectionPoint(L);
+			Point<T> p{ 0, y0() };
+			if (o.x == 0) {
+				p.x = 1;
+				p.y = y(1);
+			}
+			Point<T> q = L.symmetricPoint(p);
+			TwoPonitForm<T> l2{ o, q };
+			Line<T> l3;
+			l3.fromTwoPointForm(l2);
+			return l3;
+		}
+	}
 
 
 	///////////////////// utils /////////////////////

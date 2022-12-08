@@ -58,6 +58,35 @@ void p29()
 	assert(l2.a == 3 && l2.b == 1 && l2.c == 18);
 }
 
+// 求 x-2y-1=0 入射到 x+2y+3=0 的反射直线
+void p30()
+{
+	Line<int> l1{ 1,2,3 };
+	Line<int> l2{ 1,-2,-1 };
+	auto l3 = l2.symmetricLine(l1);
+	assert(l3.a == 11 && l3.b == 2 && l3.c == 13);
+}
+
+// 求 x-2y+1=0 关于 x=1 的对称直线
+void p31()
+{
+	Line<int> l2{ 1,-2,1 };
+	Line<int> l1{ 1,0,-1 };
+	auto l3 = l2.symmetricLine(l1);
+	assert(l3.a == 1 && l3.b == 2 && l3.c == -3);
+}
+
+// 点(-1,4) 发出的光线，遇到 2x+3y-6=0 反射后经过 (3, 62/13)，求反射光线
+void p32()
+{
+	Line<int> l1{ 2,3,-6 };
+	Point<int> A = l1.symmetricPoint(Point<int>{-1, 4});
+	Point<int> B{ 3, Rational<int>{62, 13} };
+	Line<int> l2;
+	l2.fromTwoPointForm(TwoPonitForm<int>{A, B});
+	assert(l2.a == 13 && l2.b == -26 && l2.c == 85);
+}
+
 void tst_line()
 {
 	p25();
@@ -65,6 +94,9 @@ void tst_line()
 	p27();
 	p28();
 	p29();
+	p30();
+	p31();
+	p32();
 }
 
 
