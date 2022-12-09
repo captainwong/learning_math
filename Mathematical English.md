@@ -1,0 +1,191 @@
+# Mathematical English
+
+>摘录自人教版初中数学课本2013版
+
+## 初一
+
+- `rational number` 有理数
+- `number axis` 数轴
+- `origin` 原点
+- `opposite number` 相反数
+- `absolute value` 绝对值
+- `power` 乘方、幂
+- `base number` 底数
+- `exponent` 指数
+- `approximate number` 近似数
+- `monomial` 单项式
+- `coefficient` 系数
+- `degree of a monomial` 单项式的次数
+- `polynomial` 多项式
+- `term` 项
+- `constant term` 常数项
+- `degree of a polynomial` 多项式的次数
+- `integral expression` 整式
+- `equation` 方程
+- `linear equation with one unknown` 一元一次方程
+- `solution` 解
+- `geometry` 几何学
+- `geometric figure` 几何图形
+- `solid figure` 立体图形
+- `plane figure` 平面图形
+- `developing drawing` 展开图
+- `solid` 体
+- `surface` 面
+- `line` 线
+- `point` 点
+- `intersection` 相交
+- `ponit of intersection` 交点
+- `midpoint` 中点
+- `distance` 距离
+- `definition` 定义
+- `angle` 角
+- `degree` 度
+- `angular bisector` 角平分线
+- `complementary angle` 余角
+- `supplementary angle` 补角
+- `adjacent angles on a straight line` 邻补角
+- `opposite angles` 对顶角
+- `perpendicular` 垂直
+- `perpendicular line` 垂线
+- `foot of a perpendicular` 垂足
+- `corresponding angles` 同位角
+- `alternate interior angles` 内错角
+- `interior angles on the same side` 同旁内角
+- `parallel` 平行
+- `proposition` 命题
+- `statement` 命题
+- `axiom` 公理
+- `theorem` 定理
+- `proof` 证明
+- `condition` 条件
+- `conclusion` 结论
+- `true statement` 真命题
+- `false statement` 假命题
+- `counter example` 反例
+- `corollary` 推论
+- `reduction to absurdity` 反证法
+- `translation` 平移
+- `arithmetric square root` 算术平方根
+- `radicand` 被开方数
+- `square root` 平方根、二次方根
+- `extraction of square root` 开平方
+- `cube root` 立方根、三次方根
+- `extraction of cubit root` 开立方
+- `radical exponent` 根指数
+- `irrational number` 无理数
+- `real number` 实数
+- `ordered pair` 有序数对
+- `rectangular coordinates in two demensions` 平面直角坐标系
+- `x-axis` `x` 轴
+- `y-axis` `y` 轴
+- `coordinate` 坐标
+- `quadrant` 象限
+- `linear equation with two unknowns` 二元一次方程
+- `system of linear equations with two unknowns` 二元一次方程组
+- `linear equation with three unknowns` 三元一次方程
+- `system of linear equations with three unknowns` 三元一次方程组
+- `substitution method` 代入法
+- `addition-subtraction method` 加减法
+- `inequality` 不等式
+- `solution set` 解集
+- `linear inequality with one unknown` 一元一次不等式
+- `system of linear inequality with one unknwon` 一元一次不等式组
+- `statistics` 统计学
+- `sampling survey` 抽样调查
+- `simple random sampling` 简单随机抽样
+- `frequency` 频数
+- `histogram` 直方图
+
+## 初二
+
+- `triangle` 三角形
+- `acute triangle` 锐角三角形
+- `right triangle` 直角三角形
+- `obtuse triangle` 钝角三角形
+- `isosceles triangle` 等腰三角形
+- `equilateral triangle` 等边三角形
+- `hypotenuse` 斜边
+- `leg` 直角边
+- `height` 高
+- `altitude` 高
+- `median` 中线
+- `polygon` 多边形
+- `diagonal` 对角线
+- `regular polygon` 正多边形
+- `congruent figures` 全等图形
+- `congruent triangles` 全等三角形
+- `axisymmetric figure` 轴对称图形
+- `axially symmetric figure` 轴对称图形
+- `axis of symmetry` 对称轴
+- `symmetric points` 对称点
+- `perpendicular bisector` 垂直平分线、中垂线
+- `midperpendicular` 垂直平分线、中垂线
+- `formula for the difference of squares` 平方差公式
+- `formula for the square of the sum` 完全平方公式
+- `factorization` 因式分解
+- `common factor` 公因式
+- `fraction` 分式
+- `reduction of a fraction` 约分
+- `fraction in lowest terms` 最简分式
+- `denominator` 通分
+- `fraction equation` 分式方程
+- `quadratic radical` 二次根式
+- `algebraic expression` 代数式
+- `simplest quadratic radical` 最简二次根式
+- `Pythagoras theorem` 勾股定理、毕达哥拉斯定理
+- `parallelogram` 平行四边形
+- `rectangle` 矩形
+- `rhombus` 菱形
+- `square` 正方形
+- `variable` 变量
+- `constant` 常量
+- `independent variable` 自变量
+- `function` 函数
+- `analytic expression` 解析式
+- `graph` 图像
+- `proportional function` 正比例函数
+- `linear function` 一次函数、线性函数
+- `weight` 权
+- `weighted average` 加权平均数
+- `median` 中位数
+- `mode` 众数
+- `variance` 方差
+
+## 初三
+
+- `quadratic equation in one unkown` 一元二次方程
+- `root` 根
+- `quadratic function` 二次方程
+- `rotation` 旋转
+- `central symmetry` 中心对称
+- `central symmetry figure` 中心对称图形
+- `circle` 圆
+- `center of a circle` 圆心
+- `radius` 半径
+- `chord` 弦
+- `diameter` 直径
+- `arc` 弧
+- `semi-circle` 半圆
+- `central angle` 圆心角
+- `angle in a circular segment` 圆周角
+- `circumcircle` 外接圆
+- `circumcenter` 外心
+- `tanent line` 切线
+- `inscribed circle` 内切圆
+- `incenter` 内心
+- `random event` 随机事件
+- `probability` 概率
+- `inverse proportional function` 反比例函数
+- `similar figures` 相似图形
+- `similar polygons` 相似多边形
+- `similarity ratio` 相似比
+- `similar triangles` 相似三角形
+- `homothetic figures` 位似图形
+- `sine` 正弦
+- `cosine` 余弦
+- `tangent` 正切
+- `trigonometric function of acute angle` 锐角三角函数
+- `projection` 投影
+- `parallel projection` 平行投影
+- `center projection` 中心投影
+- `view` 视图
