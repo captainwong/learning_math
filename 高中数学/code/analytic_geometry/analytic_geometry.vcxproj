@@ -146,6 +146,7 @@
     <ClInclude Include="point.h" />
     <ClInclude Include="rational.h" />
     <ClInclude Include="tostring.h" />
+    <ClInclude Include="triangle.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
