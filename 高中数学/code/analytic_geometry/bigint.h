@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <tuple>
 #include <stdlib.h>
-#include "tostring.h"
+#include "common.h"
 
 namespace math {
 
@@ -444,8 +444,15 @@ public:
 
 	/////////////////////// utils ////////////////////////////////////////
 
-	std::string toString() const {
-		return sign == '-' ? ("-" + value) : value;
+	std::string toString(PMO pmo = PMO::ShowMinus) const {
+		std::string s;
+		if (pmo == PMO::Show) {
+			s.push_back(sign);
+		} else if (pmo == PMO::ShowMinus && sign == '-') {
+			s.push_back('-');
+		}
+		s += value;
+		return s;
 	}
 
 	int toInt() const {
@@ -550,7 +557,7 @@ inline BigInt gcd(const BigInt& A, const BigInt& B) {
 inline BigInt lcm(const BigInt& a, const BigInt& b) {
 	if (a == 0 || b == 0) { return {}; }
 	BigInt g = gcd(a, b);
-	return abs(a * b) / g;
+	return math::abs(a * b) / g;
 }
 
 // a^b
@@ -593,9 +600,9 @@ inline BigInt sqrt(const BigInt& a) {
 
 //////////////////////////////////////////////////////////
 
-template<>
-inline std::string toString(const BigInt& n) {
-	return n.toString();
+template <>
+inline std::string toString(const BigInt& n, PMO pmo) {
+	return n.toString(pmo);
 }
 
 

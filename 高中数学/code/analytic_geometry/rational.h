@@ -1,27 +1,10 @@
 #pragma once
 
-#include <string>
-#include "tostring.h"
+#include "common.h"
 
 namespace math {
 
-// greatest common divisor
-template <typename T = int>
-T gcd(T a, T b) {
-    while (b) {
-        T t = a % b;
-        a = b;
-        b = t;
-    }
-    return a;
-}
 
-// least common multiple
-template <typename T = int>
-T lcm(T a, T b) {
-    T g = gcd(a, b);
-    return a / g * b;
-}
 
 // ÓÐÀíÊý p/q, q!= 0
 template <typename T = int>
@@ -63,6 +46,7 @@ struct Rational {
     Rational operator-() const {
         Rational r = *this;
         r.negate();
+        r.make_sure_q_is_positive();
         return r;
     }
 
@@ -146,6 +130,23 @@ struct Rational {
         return !(*this == rhs);
     }
 
+    bool operator>(const Rational& rhs) const {
+        return sub(rhs).positive();
+    }
+
+    bool operator<(const Rational& rhs) const {
+        return sub(rhs).negative();
+    }
+
+    bool operator>=(const Rational& rhs) const {
+        return (*this) == rhs || (*this) > rhs;
+    }
+
+    bool operator<=(const Rational& rhs) const {
+        return (*this) == rhs || (*this) < rhs;
+    }
+
+
     ///////////////////// utils /////////////////////
 
     void make_sure_q_is_positive() {
@@ -174,19 +175,28 @@ struct Rational {
         p = -p;
     }
 
-    std::string toString(char c_div = '/') const {
+
+    std::string toString(PMO pmo = PMO::ShowMinus, char c_div = '/') const {
         std::string s;
-        if (p < 0) {
+        if (pmo == PMO::Show) {
+            s.push_back(negative() ? '-' : '+');
+        } else if (pmo == PMO::ShowMinus && negative()) {
             s.push_back('-');
         }
-        s += math::toString(p);
+
+        s += math::toString(abs(p), pmo);
         if (q != 1) {
             s.push_back(c_div);
-            s += math::toString(q);
+            s += math::toString(q, pmo);
         }
         return s;
     }
 };
+
+template <typename T>
+std::string toString(const Rational<T>& r, PMO pmo = PMO::ShowMinus, char c_div = '/') {
+    return r.toString(pmo, c_div);
+}
 
 template <typename T>
 Rational<T> abs(Rational<T> r) {

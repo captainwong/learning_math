@@ -5,7 +5,6 @@
 
 using namespace math;
 using namespace analytic_geometry;
-using namespace line;
 
 // 李永乐《高三数学100讲》
 // 直线

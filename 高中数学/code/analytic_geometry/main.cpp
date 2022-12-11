@@ -5,6 +5,7 @@
 void tst_bigint();
 void tst_rational(); 
 void tst_line();
+void tst_circle();
 #endif
 
 using namespace math;
@@ -15,8 +16,8 @@ int main()
 	tst_bigint();
 	tst_rational();
 	tst_line();
+	tst_circle();
 #endif
 
 
-	Rational<BigInt> a;
 }

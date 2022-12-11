@@ -4,8 +4,6 @@
 
 namespace math {
 namespace analytic_geometry {
-namespace line {
-
 
 // 解高中数学题时一般不会出现无理数坐标、斜率、距离等
 
@@ -332,6 +330,5 @@ struct Line {
 
 
 
-}
 }
 }

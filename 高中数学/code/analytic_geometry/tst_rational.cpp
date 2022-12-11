@@ -1,5 +1,6 @@
 #include "rational.h"
 #include "bigint.h"
+#include "bigrational.h"
 #include <assert.h>
 
 // https://pintia.cn/problem-sets/14/exam/problems/815
@@ -158,5 +159,8 @@ void tst_rational()
     sum /= BigInt(4);
     assert(sum == Rational<BigInt>(1, 6));
     //printf("%s\n", sum.toString().c_str());
-    
+    //
+
+    Rational<int> i(333);
+    i.toString();
 }
