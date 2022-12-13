@@ -163,6 +163,18 @@ struct Line {
 		return abs(a * p.x + b * p.y + c) / sqrt(a * a + b * b);
 	}
 
+	// 两点到直线的最小距离和
+	Rational<T> minDistance(const Point<T>& a, const Point<T>& b) const {
+		if (ptOnLine(a)) {
+			return distance(b);
+		} else if (ptOnLine(b)) {
+			return distance(a);
+		} else {
+			Point<T> p = symmetricPoint(a);
+			return distance(p, b);
+		}
+	}
+
 	// 点在直线上的投影
 	Point<T> projection(const Point<T>& p) const {
 		Rational<T> denom = a * a + b * b;
