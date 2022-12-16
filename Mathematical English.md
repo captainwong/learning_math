@@ -189,3 +189,120 @@
 - `parallel projection` 平行投影
 - `center projection` 中心投影
 - `view` 视图
+
+## 高中必须1
+
+- `element` 元素
+- `set` 集合
+- `belong to` 属于
+- `not belong to` 不属于
+- `subset` 子集
+- `Venn` 维恩
+- `proper subset` 真子集
+- `empty set` 空集
+- `union set` 并集
+- `intersection set` 交集
+- `universe set` 全集
+- `complementary set` 补集
+- `cardinal` 基数
+  
+- `function` 函数
+- `domain` 定义域
+- `range` 值域
+- `mapping` 映射
+- `G. W. Leibniz` 莱布尼兹，德国，1646-1716
+- `J. Bernoulli` 约翰·伯努利，瑞士，1667-1748
+- `L. Euler` 欧拉，瑞士，1707-1783
+- `P. G. L. Dirichlet` 狄利克雷，德国，1805-1859
+- `increasing function` 增函数
+- `decreasing function` 减函数
+- `maximum value` 最大值
+- `minimum value` 最小值
+- `even function` 偶函数
+- `odd function` 奇函数
+- `n th root` `n` 次方根
+
+
+$$
+\sqrt[n]{a}
+$$
+
+- `radical` 根式，上式称为根式
+- `radical exponent` 根指数， $n$ 为根指数
+- `radicand` 被开方数， $a$ 为被开方数
+- `exponential function` 指数函数
+- `logarithm` 对数
+- `common logarithm` 常用对数，即以 `10` 为底的对数
+- `natural logarithm` 自然对数，即以 `e` 为底的对数
+- `J. Napier` 纳皮尔，英国，1550-1617
+- `M. Stifel` 斯蒂弗尔，德国，约1487-1567
+- `H. Briggs` 布里格斯，英国，1561-1631
+- `R. Descartes` 笛卡尔，法国，1596-1650
+- `logarithmic function` 对数函数
+- `inverse function` 反函数
+- `power function` 幂函数
+- `zero point` 零点
+- `bisection` 二分法
+- `al-Khwarizmi` 花拉子米，阿拉伯，约780-约850
+- `N. Tartaglia` 塔尔塔利亚，意大利，约1499-1557
+- `G. Cardano` 卡尔达诺，意大利，1501-1576
+- `L. Ferrari` 费拉里，意大利，1522-1565
+- `J. -L. Lagarange` 拉格朗日，法国，1736-1813
+- `N. H. Abel` 阿贝尔，挪威，1802-1829
+- `E. Galois` 伽罗瓦，法国，1811-1832
+- `T. R. Malthus` 马尔萨斯，英国，1766-1834
+- `Issac Newton` 牛顿，英国，1643-1727
+
+
+## 高中必修2
+
+- `prism` 棱柱
+- `pyramid` 棱锥
+- `circular cylinder` 圆柱
+- `circular cone` 圆锥
+- `frustum of a pyrimid` 棱台
+- `frustum of a cone` 圆台
+- `solid sphere` 球体，球
+- `Leonardo da Vinci` 达芬奇，意大利，1452-1519
+- `Desarque` 笛沙格，法国，1593-1662
+- `Monge` 蒙日，法国，1745-1818
+- `plane` 平面
+- `skew lines` 异面直线
+- `dihedral angle` 二面角
+- `Euclid` 欧几里得，古希腊，B.C. 330 - B.C. 275
+- `angle of inclination` 倾斜角
+- `slope` 斜率
+- `intercept` 截距
+- `slope intercept form` 斜截式
+- `point slope form` 点斜式
+- `two-point form` 两点式
+- `general form` 一般式
+- `Descarties` 笛卡尔，法国，1596-1650
+- `Fermat` 费马，法国，1601-1665
+- `standard equation of circle` 圆的标准方程
+- `general equation of circle` 圆的一般方程
+- `algorithm` 算法
+- `BASIC - Beginner's All-purpose Symbolic Instruction Code` 初学者通用符号指令代码
+- `simple random sampling` 简单随机抽样
+- `systematic smapling` 系统抽样
+- `stratified sampling` 分层抽样
+- `frequency distribution` 频率分布
+- `stem-and-leaf display` 茎叶图
+- `standard deviation` 标准差
+- `scatterplot` 散点图
+- `regression line` 回归直线
+- `method of least square` 最小二乘法
+- `certain event` 必然事件
+- `impossible event` 不可能事件
+- `ramdom event` 随机事件
+- `frequency` 频数
+- `relative frequency` 频率
+- `probability` 概率
+- `Jacob Bernouli` 雅可比·伯努利，瑞士，1654-1705
+- `Gregor Mendel` 孟德尔，奥地利，1822-1884
+- `elementary event` 基本事件
+- `classical models of probability` 古典事件概型，古典概型
+- `J. von Neuman` 冯·诺依曼，德国，1903-1957
+- `geometric models of probability` 几何概率模型，几何概型
+- `Gaius Julius Caesar` 凯撒，罗马，B.C. 100-B.C. 44
+- 
