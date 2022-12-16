@@ -223,9 +223,7 @@
 - `n th root` `n` 次方根
 
 
-$$
-\sqrt[n]{a}
-$$
+$\sqrt[n]{a}$
 
 - `radical` 根式，上式称为根式
 - `radical exponent` 根指数， $n$ 为根指数
@@ -281,6 +279,9 @@ $$
 - `Fermat` 费马，法国，1601-1665
 - `standard equation of circle` 圆的标准方程
 - `general equation of circle` 圆的一般方程
+
+## 高中必修3
+
 - `algorithm` 算法
 - `BASIC - Beginner's All-purpose Symbolic Instruction Code` 初学者通用符号指令代码
 - `simple random sampling` 简单随机抽样
@@ -305,4 +306,160 @@ $$
 - `J. von Neuman` 冯·诺依曼，德国，1903-1957
 - `geometric models of probability` 几何概率模型，几何概型
 - `Gaius Julius Caesar` 凯撒，罗马，B.C. 100-B.C. 44
-- 
+
+## 高中必修4
+
+- `positive angle` 正角
+- `negative angle` 负角
+- `zero angle` 零角
+- `any angle` 任意角
+- `quadrant angle` 象限角
+- `degree measure` 角度制
+- `radian measure` 弧度制
+- `radian` 弧度
+- `unit circle` 单位圆
+- `sine` 正弦
+- `cosine` 余弦
+- `tangent` 正切
+- `trigonometric function` 三角函数
+- `directed line segment` 有向线段
+- `J. Regiomontanus` 雷格蒙塔努斯，德国，1436-1476
+- `G. J. Rhaeticus` 雷提库斯，奥地利，1514-1576
+- `F. Vieta` 韦达，法国，1540-1603
+- `induction formula` 诱导公式
+- `sine curve` 正弦曲线
+- `cosine curve` 余弦曲线
+- `periodic function` 周期函数
+- `period` 周期
+- `minimal positive period` 最小正周期
+- `amplitude of vibration` 振幅
+- `phase` 相位
+- `initial phase` 初相
+- `vector` 向量
+- `scalar` 标量
+- `zero vector` 零向量
+- `unit vector` 单位向量
+- `parallel vectors` 平行向量
+- `equal vectors` 相等向量
+- `collinear vectors` 共线向量
+- `Aristotle` 亚里士多德，古希腊，B.C. 384-B.C.322
+- `R. Argand` 阿尔冈，瑞士，1768-1822
+- `Mobius` 莫比乌斯，德国，1790-1868
+- `W. R. Hamilton` 哈密尔顿，爱尔兰，1805-1865
+- `J.W. Gibbs` 吉布斯，美国，1839-1903
+- `C. Wessel` 威赛尔，丹麦，1745-1818
+- `multiplication of vector by scalar` 向量的数乘
+- `inner product` 数量积，内积
+- `projection` 投影
+
+## 高中必修5
+
+- `law of sines` 正弦定理
+- `solving triangles` 解三角形
+- `law of cosines` 余弦定理
+- `Pythagoras` 毕达哥拉斯，古希腊，BC 570-BC 500
+- `sequence of number` 数列
+- `Sierpinski` 希尔宾斯基，波兰，1882-1969
+- `Leonardo Fibonaci` 斐波那契，意大利，1170-1250
+- `Liber Abacci` 《算盘全书》
+- `arithmetic sequence` 等差数列
+- `arithmetic progression` 等差数列
+- `common difference` 公差
+- `arithmetic mean` 等差中项
+- `Johann Carl Friedrich Gauss` 卡尔·弗里德里希·高斯，德国，1777-1855
+- `geometric sequence` 等比数列
+- `geometric progression` 等比数列
+- `common ratio` 公比
+- `boundary` 边界
+- `objective function` 目标函数
+- `linear objectives` 线性目标函数
+- `linear program` 线性规划
+- `feasible solution` 可行解
+- `feasible region` 可行域
+
+
+## 高中选修1-1
+
+- `proposition` 命题
+- `true proposition` 真命题
+- `false proposition` 假命题
+- `original proposition` 原命题
+- `inverse proposition` 逆命题
+- `negative proposition` 否命题
+- `inverse and negative proposition` 逆否命题
+- `sufficient condition` 充分条件
+- `necessary condition` 必要条件
+- `sufficient and necessary condition` 充要条件
+- `and` 且
+- `or` 或
+- `not` 非
+- `universal quantifier` 全称量词
+- `existential quantifier` 存在量词
+- `ellipse` 椭圆
+- `Germinal Pierre Dandelin` 旦德林 法国，1794-1847
+- `hyperbola` 双曲线
+- `parabola` 抛物线
+- `average rate of change` 平均变化率
+- `instantaneous velocity` 瞬时速度
+- `derivative` 导数
+- `tangent line` 切线
+- `derivative function` 导函数，导数
+- `extrem value` 极值
+- `differential` 微分
+- `integral` 积分
+- `differential and integral calculus` 微积分
+
+## 选修1-2
+
+- `regression analysis` 回归分析
+- `corrected total sum of squaters` 总偏差平方和
+- `residual` 残差
+- `residual sum of squares` 残差平方和
+- `regression sum of squares` 回归平方和
+- `Goldbach` 哥德巴赫
+- `Kepler` 开普勒，1571-1630
+- `plausible reasoning` 合情推理
+- `Laplace` 拉普拉斯，法国，1749-1827
+- `demonstrative reasoning` 演绎推理，逻辑推理
+- `Tycho` 第谷，丹麦，1536-1601
+- `J. C. Adams` 亚当斯，英国，1819-1892，预言海王星
+- `synthetical method` 综合法，顺推证法，由因导果法
+- `analytical method` 分析法，逆推证法，执果索因法
+- `reduction of absurdity` 反证法
+- `complex number` 复数
+- `imaginary unit` 虚数单位
+- `set of complex numbers` 复数集
+- `algebraic form of complex number` 复数的代数形式
+- `real part` 实部
+- `imaginary part` 虚部
+- `Jean-Robert Argand` 阿甘得，瑞士藏书家
+- `Argand diagram` 阿甘得图
+- `conjugate complex number` 共轭复数
+
+
+## 高中选修2-3
+
+- `arrangement` 排列
+- `combination` 组合
+- `binomial theorem` 二项式定理
+- `binomial coeefficient` 二项式系数
+- `random variable` 随机变量
+- `discrete random variable` 离散型随机变量
+- `probability distribution series` 概率分布列
+- `distribution series` 分布列
+- `two-point distribution` 两点分布，伯努利分布
+- `hypergeometric distribution` 服从超几何分布
+- `conditional probability` 条件概率
+- `mutually independent` 相互独立
+- `independent and repeated trials` 独立重复试验
+- `binomial distribution` 二项分布
+- `mean` 均值
+- `mathematical expectation` 数学期望
+- `variance` 方差
+- `standard deviation` 标准差
+- `normal distribution` 正态分布
+- `regression analysis` 回归分析
+- `corrected total sum of squaters` 总偏差平方和
+- `residual` 残差
+- `residual sum of squares` 残差平方和
+- `regression sum of squares` 回归平方和
